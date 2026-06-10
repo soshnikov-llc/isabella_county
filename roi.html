@@ -77,9 +77,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .source-note{font-size:11px;color:#94a3b8;line-height:1.5;margin-top:8px;border-top:1px solid var(--border);padding-top:8px;}
 .source-note a{color:var(--blue);}
 
-/* PORTFOLIO CHART */
-.port-chart{margin-bottom:24px;}
-
 /* TABLE */
 .roi-table{width:100%;border-collapse:collapse;font-size:12.5px;}
 .roi-table thead th{background:var(--navy);color:rgba(255,255,255,.9);padding:9px 11px;text-align:left;font-size:11px;font-weight:600;letter-spacing:.03em;}
@@ -122,7 +119,7 @@ footer{border-top:1px solid var(--border);padding:18px 28px;font-size:11.5px;col
       <div class="hdiv"></div>
       <div class="hs"><div class="num" id="h-sav">$41.4M</div><div class="lbl">Total estimated savings/year</div><div class="cmp">Healthcare + productivity + criminal justice</div></div>
       <div class="hdiv"></div>
-      <div class="hs"><div class="num">7,696</div><div class="lbl">DALYs/year current burden</div><div class="cmp">→ <a href="index.html" style="color:#34d399">See full burden dashboard</a></div></div>
+      <div class="hs"><div class="num">11,710</div><div class="lbl">DALYs/year current burden</div><div class="cmp">→ <a href="index.html" style="color:#34d399">See full burden dashboard</a></div></div>
     </div>
   </div>
 </div>
@@ -169,16 +166,16 @@ footer{border-top:1px solid var(--border);padding:18px 28px;font-size:11.5px;col
       <div class="delta">5-yr cumulative: <span id="s-5yr">$207M</span></div>
     </div>
     <div class="scard" style="--accent:var(--purple)">
-      <div class="num" id="s-daly">~1,540</div>
+      <div class="num" id="s-daly">~2,340</div>
       <div class="lbl">Estimated DALYs averted/year</div>
-      <div class="delta">~20% of total 7,696 burden</div>
+      <div class="delta">~20% of total 11,710 burden</div>
     </div>
   </div>
 
   <!-- Methodology note -->
   <div class="meth-box">
     <strong>Methodology.</strong> ROI ratios are drawn from peer-reviewed meta-analyses and systematic reviews. Isabella County–specific estimates apply published ROI ratios to local population subgroups derived from the disease burden analysis (<a href="index.html">see dashboard</a>). Estimates assume published program effectiveness can be replicated in a rural Michigan setting, which may require adjustment for local context. Use sliders to model different program reach scenarios. All figures are in 2024–2026 US dollars. "Savings" include direct medical cost reductions, averted hospitalizations, and — under the societal perspective — productivity gains and criminal justice savings. These are planning estimates, not audited projections.
-    <br><strong>Population base:</strong> 64,565 total / ~52,000 adults · <a href="Isabella_County_Methods_Supplement.html">Full methods →</a>
+    <br><strong>Population base:</strong> 64,565 total / ~52,297 adults · Total burden: 11,710 DALYs (CDC PLACES 2024 · CDC WONDER 2020–22) · <a href="Isabella_County_Methods_Supplement.html">Full methods →</a>
   </div>
 
   <!-- Charts -->
@@ -206,15 +203,8 @@ footer{border-top:1px solid var(--border);padding:18px 28px;font-size:11.5px;col
       <table class="roi-table">
         <thead>
           <tr>
-            <th>Intervention</th>
-            <th>Target pop.</th>
-            <th>Reach</th>
-            <th>Patients</th>
-            <th>Investment/yr</th>
-            <th>Savings/yr</th>
-            <th>ROI ratio</th>
-            <th>Net benefit/yr</th>
-            <th>Relative impact</th>
+            <th>Intervention</th><th>Target pop.</th><th>Reach</th><th>Patients</th>
+            <th>Investment/yr</th><th>Savings/yr</th><th>ROI ratio</th><th>Net benefit/yr</th><th>Relative impact</th>
           </tr>
         </thead>
         <tbody id="roi-tbody"></tbody>
@@ -241,13 +231,13 @@ footer{border-top:1px solid var(--border);padding:18px 28px;font-size:11.5px;col
 </div><!-- end .page -->
 
 <footer>
-  <span>ROI Analysis · Isabella County · Soshnikov · June 2026</span>
+  <span>ROI Analysis · Isabella County · Soshnikov · June 2026 · Data: CDC PLACES 2024</span>
   <span>Sergey Soshnikov, MD, PhD · ssoshmail@gmail.com · <a href="index.html" style="color:inherit">← Back to Dashboard</a></span>
 </footer>
 
 <script>
 // ═══════════════════════════════════════════════════════
-// DATA — ROI from meta-analyses
+// DATA — Updated 2025 (CDC PLACES 2024 · CDC WONDER 2020-22)
 // ═══════════════════════════════════════════════════════
 const INTERVENTIONS = {
   mh: {
@@ -256,10 +246,10 @@ const INTERVENTIONS = {
     icon: '🧠',
     color: '#7c3aed',
     accentBg: '#faf5ff',
-    condition: 'Mental health disorders, SUD',
+    condition: 'Mental health disorders (29.8% adult prevalence — #1 burden, 2,713 DALYs)',
     mechanism: 'Telepsychiatry + care manager in primary care (IMPACT model)',
-    targetPop: 7800,
-    targetLabel: '~7,800 MH patients',
+    targetPop: 15585,
+    targetLabel: '~15,585 MH patients (CDC PLACES 2024)',
     defaultReach: 20,
     costPerPt: 800,
     roiRatio: 6.0,
@@ -276,10 +266,10 @@ const INTERVENTIONS = {
     icon: '💊',
     color: '#d97706',
     accentBg: '#fff7ed',
-    condition: 'Substance use disorders, NAS',
+    condition: 'Substance use disorders (#3 burden, 2,516 DALYs · 37 deaths/yr at age 44)',
     mechanism: 'Buprenorphine via telehealth (Bicycle Health model)',
-    targetPop: 5200,
-    targetLabel: '~5,200 SUD patients',
+    targetPop: 3755,
+    targetLabel: '~3,755 SUD patients (CDC PLACES 2024)',
     defaultReach: 15,
     costPerPt: 3000,
     roiRatio: 12.0,
@@ -296,10 +286,10 @@ const INTERVENTIONS = {
     icon: '🚭',
     color: '#059669',
     accentBg: '#f0fdf4',
-    condition: 'COPD, cardiovascular disease, cancer',
+    condition: 'COPD, cardiovascular disease, cancer (18.6% adult smoking rate)',
     mechanism: 'Quitline + NRT coverage + AI text-based support (SmokefreeMI)',
-    targetPop: 10400,
-    targetLabel: '~10,400 adult smokers',
+    targetPop: 9727,
+    targetLabel: '~9,727 adult smokers (18.6% × 52,297)',
     defaultReach: 10,
     costPerPt: 183,
     roiRatio: 3.12,
@@ -316,10 +306,10 @@ const INTERVENTIONS = {
     icon: '❤️',
     color: '#1a56db',
     accentBg: '#eff6ff',
-    condition: 'Ischemic heart disease, stroke',
+    condition: 'Ischemic heart disease, stroke (32.1% hypertension · CVD+Stroke 2,149 DALYs)',
     mechanism: 'Home BP cuffs + AI titration platform + community health workers',
-    targetPop: 15600,
-    targetLabel: '~15,600 hypertensive adults',
+    targetPop: 16768,
+    targetLabel: '~16,768 hypertensive adults (32.1% × 52,297)',
     defaultReach: 10,
     costPerPt: 500,
     roiRatio: 1.75,
@@ -336,7 +326,7 @@ const INTERVENTIONS = {
     icon: '🔬',
     color: '#dc2626',
     accentBg: '#fef2f2',
-    condition: 'Cancer, all sites',
+    condition: 'Cancer, all sites (#2 burden, 2,693 DALYs · 130 deaths/yr at age 67)',
     mechanism: 'AI-enhanced lung/breast/colorectal screening in primary care',
     targetPop: 5000,
     targetLabel: '5,000 high-risk patients',
@@ -344,7 +334,7 @@ const INTERVENTIONS = {
     costPerPt: 200,
     roiRatio: 2.54,
     roiRange: [1.5, 4.0],
-    roiSource: 'Derived estimate: stage shift from Stage IV to Stage I/II saves ~$150K per case × 15% early detection rate. Lung AI cost-effectiveness: $1,240/patient threshold (Horeweg et al., Eur Radiol 2022). UK breast AI: cost-saving at £20K/QALY threshold (BJC 2026).',
+    roiSource: 'Stage shift from Stage IV to Stage I/II saves ~$150K per case × 15% early detection rate. Lung AI cost-effectiveness: $1,240/patient threshold (Horeweg et al., Eur Radiol 2022). UK breast AI: cost-saving at £20K/QALY threshold (BJC 2026).',
     roiUrl: 'https://www.nature.com/articles/s41416-026-03465-3',
     savings_mechanism: 'Stage I vs IV treatment cost differential (~$150K per shifted diagnosis × 15% shift rate)',
     dalys_averted_pct: 0.10,
@@ -356,7 +346,7 @@ const INTERVENTIONS = {
     icon: '🥦',
     color: '#0d9488',
     accentBg: '#f0fdfa',
-    condition: 'Diabetes, CVD, obesity',
+    condition: 'Diabetes, CVD, obesity (16.4% food insecurity; 11.6% diabetes; 43.1% obesity)',
     mechanism: 'SDOH screening + $32/month produce vouchers for diabetic/food-insecure patients',
     targetPop: 1500,
     targetLabel: '~1,500 diabetic + food-insecure',
@@ -407,7 +397,6 @@ function fmtM(v) {
   if (Math.abs(v)>=1e6) return `$${(v/1e6).toFixed(1)}M`;
   return `$${Math.round(v/1000)}K`;
 }
-function fmtMno$(v) { return fmtM(v).replace('$',''); }
 
 // Build intervention cards
 function buildCards() {
@@ -498,7 +487,6 @@ function updateSummary() {
 function updateTable() {
   const tbody = document.getElementById('roi-tbody');
   const horizon = parseInt(document.getElementById('horizon')?.value||5);
-  const persp = document.getElementById('perspective')?.value||'societal';
   const maxSav = Math.max(...Object.keys(INTERVENTIONS).map(k=>calc(k).savings));
   const t = totalCalc();
   let rows = '';
@@ -531,9 +519,9 @@ function updateGrant() {
   const t = totalCalc();
   const horizon = parseInt(document.getElementById('horizon')?.value||5);
   document.getElementById('grant-significance').innerHTML =
-    `Isabella County, Michigan faces a disease burden of 7,696 estimated DALYs annually, with mental health access (176,938:1 psychiatrist ratio) and substance use disorders (2nd-highest DALY burden under Michigan life expectancy) as the highest-priority gaps. Evidence-based AI-augmented interventions targeting these conditions have demonstrated ROI ratios of ${Math.min(...Object.values(INTERVENTIONS).map(d=>d.roiRatio)).toFixed(1)}:1 to ${Math.max(...Object.values(INTERVENTIONS).map(d=>d.roiRatio)).toFixed(0)}:1 in peer-reviewed studies. A portfolio of six targeted programs is estimated to require ${fmtM(t.inv)} annually and return ${fmtM(t.sav)} in savings — a ${t.roi.toFixed(1)}:1 return and ${fmtM(t.net*horizon)} net benefit over ${horizon} years.`;
+    `Isabella County, Michigan faces a disease burden of 11,710 estimated DALYs annually (CDC PLACES 2024, CDC WONDER 2020–22), with mental health access (29.8% adult prevalence, 176,938:1 psychiatrist ratio — #1 burden at 2,713 DALYs) and cancer (#2, 2,693 DALYs) as the highest-priority gaps. Evidence-based AI-augmented interventions targeting these conditions have demonstrated ROI ratios of ${Math.min(...Object.values(INTERVENTIONS).map(d=>d.roiRatio)).toFixed(1)}:1 to ${Math.max(...Object.values(INTERVENTIONS).map(d=>d.roiRatio)).toFixed(0)}:1 in peer-reviewed studies. A portfolio of six targeted programs is estimated to require ${fmtM(t.inv)} annually and return ${fmtM(t.sav)} in savings — a ${t.roi.toFixed(1)}:1 return and ${fmtM(t.net*horizon)} net benefit over ${horizon} years.`;
   document.getElementById('grant-board').innerHTML =
-    `For every dollar invested in this package of six AI-enhanced health programs, Isabella County would see an estimated <strong>${t.roi.toFixed(1)} dollars in return</strong> — through reduced hospitalizations, fewer overdose deaths, prevented strokes, and earlier cancer detection. The total annual investment of ${fmtM(t.inv)} — comparable to the cost of 3–4 averted stroke hospitalizations — would generate ${fmtM(t.net)} in annual net benefit and ${fmtM(t.net*horizon)} over ${horizon} years. MAT telehealth alone, at ${fmtM(calc('sud').investment)}/year, would return ${fmtM(calc('sud').savings)} annually.`;
+    `For every dollar invested in this package of six AI-enhanced health programs, Isabella County would see an estimated <strong>${t.roi.toFixed(1)} dollars in return</strong> — through reduced hospitalizations, fewer overdose deaths, prevented strokes, and earlier cancer detection. The total annual investment of ${fmtM(t.inv)} — comparable to the cost of 3–4 averted stroke hospitalizations — would generate ${fmtM(t.net)} in annual net benefit and ${fmtM(t.net*horizon)} over ${horizon} years. Collaborative care for mental health alone, targeting 29.8% adult MH prevalence at 20% reach, would return ${fmtM(calc('mh').savings)} annually on ${fmtM(calc('mh').investment)} invested.`;
 }
 
 // Charts
@@ -557,7 +545,6 @@ function initCharts() {
   updateCharts();
 }
 function updateCharts() {
-  const persp = document.getElementById('perspective')?.value||'societal';
   const keys = Object.keys(INTERVENTIONS);
   const labels = keys.map(k=>INTERVENTIONS[k].short);
   const invs = keys.map(k=>Math.round(calc(k).investment/1000));

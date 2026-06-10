@@ -115,11 +115,12 @@ tbody td{padding:7px 10px;vertical-align:top;}
   </div>
   <div class="corr">Correspondence: <a href="mailto:ssoshmail@gmail.com" style="color:var(--blue)">ssoshmail@gmail.com</a></div>
   <div class="meta-chips">
-    <span class="chip">Version 3.0 (Audit-Revised)</span>
+    <span class="chip">Version 4.0 (2025 Data Update)</span>
     <span class="chip">June 2026</span>
     <span class="chip">Not peer-reviewed</span>
     <span class="chip">Planning purposes only</span>
     <span class="chip">Michigan LE 78.6 yrs (MDHHS 2024)</span>
+    <span class="chip">CDC PLACES 2024 · CDC WONDER 2020–22</span>
   </div>
 </div>
 
@@ -127,47 +128,47 @@ tbody td{padding:7px 10px;vertical-align:top;}
 <div class="abstract">
   <div class="hd">Abstract</div>
   <p><strong>Background.</strong> County-level disease burden estimates are rarely available in the United States outside large academic centers. This analysis applies standard DALY methodology to estimate disease burden of seven major condition groups in Isabella County, Michigan — a rural county of 64,565 residents with a designated Medical Underserved Area status and multiple Health Professional Shortage Area (HPSA) designations.</p>
-  <p><strong>Methods.</strong> We constructed disability-adjusted life year (DALY) estimates from secondary data: Michigan MDHHS 2020 PCNA (mortality rates), CDC PLACES/BRFSS (prevalence), WHO/IHME 2023 (disability weights), and U.S. Census ACS 2024 (population denominators). YLL used Michigan observed life expectancy of 78.6 years (MDHHS 2024, avg Male 76.2 / Female 80.9) — not the WHO/IHME normative standard of 88.9 years — as this is more methodologically appropriate for local planning. Economic burden was quantified by human capital (DALYs × Michigan GDP per capita) and value of statistical life (HHS 2026, income-adjusted).</p>
-  <p><strong>Results.</strong> Total estimated burden: <strong>7,696 DALYs</strong> (±20%), comprising 3,286 YLL + 4,410 YLD. Leading conditions: cancer (1,585), substance use disorders (1,491), cardiovascular disease (1,205). Stroke mortality is 49% above Michigan average. Economic burden: ~$477M/year (human capital) to ~$4.1B/year (VSL).</p>
-  <p><strong>Limitations.</strong> Mixed-source modeled planning scenario — not a validated county burden estimate. Several mortality values are state-level proxies (county suppressed in CDC WONDER). Prevalence inputs are modeled. YLL uses simplified mean-age approach. Results are directional planning approximations only.</p>
-  <p><strong>Conclusion.</strong> Isabella County's burden is driven by poverty, mental health access deficits, tobacco, and substance use. Findings support telepsychiatry, hypertension control, cessation programs, and prenatal SUD treatment as priorities. See <a href="roi.html" style="color:var(--blue)">ROI analysis →</a> for investment return estimates.</p>
+  <p><strong>Methods.</strong> We constructed disability-adjusted life year (DALY) estimates from secondary data: CDC WONDER 2020–2022 (county mortality with rural adjustment factors), CDC PLACES 2024 (prevalence), WHO/IHME 2021 (disability weights), and U.S. Census ACS 2022 (population denominators). YLL used Michigan observed life expectancy of 78.6 years (MDHHS 2024, avg Male 76.2 / Female 80.9). Economic burden was quantified by human capital (DALYs × Michigan GDP per capita) and value of statistical life (HHS 2026, income-adjusted).</p>
+  <p><strong>Results.</strong> Total estimated burden: <strong>11,710 DALYs</strong> (±20%), comprising 5,067 YLL + 6,643 YLD. Leading conditions: mental health (2,713 — <strong>#1</strong>), cancer (2,693), substance use disorders (2,516). Mental health now ranks first driven by CDC PLACES 2024 showing 29.8% adult prevalence. Stroke mortality remains 49% above Michigan average. Economic burden: ~$726M/year (human capital) to ~$4.9B/year (VSL).</p>
+  <p><strong>Limitations.</strong> Mixed-source modeled planning scenario — not a validated county burden estimate. Prevalence inputs are modeled by CDC PLACES (MLRP methodology). YLL uses simplified mean-age approach. Rural adjustment factors (×1.3–1.85) applied to state-level mortality rates for suppressed county cells. Results are directional planning approximations only.</p>
+  <p><strong>Conclusion.</strong> Isabella County's burden is led by mental health access deficits (29.8% prevalence, 176,938:1 psychiatrist ratio), cancer, and substance use. Findings support telepsychiatry/collaborative care, AI-assisted cancer screening, MAT telehealth, and hypertension control as priorities. See <a href="roi.html" style="color:var(--blue)">ROI analysis →</a> for investment return estimates.</p>
 </div>
 
-<div class="keywords"><strong>Keywords:</strong> disability-adjusted life years · disease burden · rural health · Michigan · DALY methodology · public health planning · health professional shortage areas</div>
+<div class="keywords"><strong>Keywords:</strong> disability-adjusted life years · disease burden · rural health · Michigan · DALY methodology · public health planning · health professional shortage areas · CDC PLACES 2024</div>
 
 <!-- 1. Background -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">1.</span> Background and Study Context</h2>
 
-<p>Isabella County is a rural county in mid-Michigan (FIPS 26073), home to Central Michigan University (CMU) in Mount Pleasant. Population: 64,565 (Census ACS 2024). The presence of a large university creates an unusual demographic: substantial young adult population and elevated poverty rates under standard definitions that do not distinguish student poverty from structural community poverty.</p>
+<p>Isabella County is a rural county in mid-Michigan (FIPS 26073), home to Central Michigan University (CMU) in Mount Pleasant. Population: 64,565 (Census ACS 2022). The presence of a large university creates an unusual demographic: substantial young adult population and elevated poverty rates under standard definitions that do not distinguish student poverty from structural community poverty.</p>
 
 <p>Federal access designations: Primary Care HPSA (low-income), Dental HPSA (low-income), Mental Health HPSA (Central Michigan Service Area, multi-county), and Medically Underserved Area/Population (MUA/P) for low-income residents.</p>
 
 <p>MDHHS 2020 PCNA ranks: Overall Rank 48 of 83 Michigan counties; Health Status Rank 50 of 83 (rank 1 = best). These are distinct indices — see Section 4.5. All MDHHS PCNA data are pre-pandemic baseline; post-COVID values may differ substantially.</p>
 
 <div class="warn-box">
-  <strong>Important framing:</strong> This document is a <strong>mixed-source modeled planning scenario</strong>. It pools data from MDHHS 2020, WHO/IHME 2023, County Health Rankings 2025, and Census ACS 2024–25. It should not be cited as an official county burden estimate. A publication-grade analysis requires age-specific CDC WONDER death distributions, direct county prevalence, and systematic uncertainty quantification (see Section 7).
+  <strong>Important framing:</strong> This document is a <strong>mixed-source modeled planning scenario</strong>. It pools data from CDC WONDER 2020–22, CDC PLACES 2024, WHO/IHME 2021, and Census ACS 2022. It should not be cited as an official county burden estimate. A publication-grade analysis requires age-specific CDC WONDER death distributions, direct county prevalence, and systematic uncertainty quantification (see Section 7). Version 4.0 incorporates CDC PLACES 2024 prevalence data, which substantially increased mental health estimates (29.8% adult prevalence vs. ~15% in prior versions).
 </div>
 
 <!-- 2. Data Sources -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">2.</span> Data Sources</h2>
 
 <h3 class="sub">2.1 Mortality data</h3>
-<p>Cause-specific mortality rates from MDHHS 2020 PCNA (Isabella County Profile, Rank 48). Rates are per 100,000 population, pre-pandemic. The PCNA does not specify age-adjusted vs. crude for all indicators — see Section 4.1 for the implications.</p>
-<p>County mortality data for SUD, suicide, and several other causes are suppressed in CDC WONDER (cell count &lt;10). Michigan state rate (29.3/100k) was substituted for SUD. Suicide YLL = 0 in this analysis. All substitutions are explicitly flagged in results.</p>
+<p>Cause-specific mortality from CDC WONDER 2020–2022 (3-year pooled counts, Isabella County, FIPS 26073), with rural adjustment factors applied for suppressed cells (&lt;10 deaths). Rural adjustment factors range from ×1.3 (diabetes) to ×1.85 (SUD), derived from MDHHS rural-urban mortality differentials. For all-cause comparison, MDHHS 2020 PCNA rate (819.9/100k) is used.</p>
+<p>County mortality data for several causes remain suppressed in CDC WONDER (cell count &lt;10). State-level rates with rural adjustments were applied as proxies for suppressed cells. All substitutions are explicitly flagged in results.</p>
 
 <h3 class="sub">2.2 Prevalence data</h3>
-<p>In order of priority: CDC PLACES (county model-based estimates for NCD indicators); BRFSS state-level (SUD); SAMHSA national estimates (MH, SUD); MDHHS PCNA figures. CDC PLACES uses multilevel regression and poststratification — all prevalence inputs are classified as <span class="dc mdl">modeled</span>, not directly observed.</p>
+<p>CDC PLACES 2024 (county model-based estimates) provides primary prevalence inputs. CDC PLACES uses multilevel regression and poststratification (MLRP) applied to BRFSS data — all prevalence inputs are classified as <span class="dc mdl">modeled</span>, not directly observed. Derived estimates (marked <span class="dc imp">derived</span>) used where CDC PLACES does not report the specific condition (SUD, CVD).</p>
 
 <h3 class="sub">2.3 Disability weights and life expectancy</h3>
-<p>Disability weights: WHO/IHME 2023 (GBD 2021 cycle, published Oct 2025 in <em>The Lancet</em>). Moderate-severity weights applied as primary estimates.</p>
+<p>Disability weights: WHO/IHME GBD 2021. Moderate-severity weights applied as primary estimates.</p>
 <p><strong>Reference life expectancy used for YLL: 78.6 years</strong> (Michigan 2024: Male 76.2, Female 80.9, average). Source: MDHHS Vital Statistics. <a href="https://www.mdch.state.mi.us/osr/deaths/lifeUSMI.asp" target="_blank" style="color:var(--blue)">lifeUSMI.asp →</a></p>
-<p>Cancer exception: No single aggregate DW exists for all cancers. Weighted composite DW ≈ 0.30 constructed from MDHHS 2020 site distribution: lung (0.279), colorectal (0.167), prostate (0.126), breast (0.049).</p>
+<p>Cancer DW: Weighted composite DW ≈ 0.294 constructed from MDHHS 2020 site distribution: lung (0.279), colorectal (0.167), prostate (0.126), breast (0.049), other sites (0.400).</p>
 
 <h3 class="sub">2.4 Population denominators</h3>
-<p>Total population 64,565 (Census ACS 5-yr 2024). For conditions where CDC PLACES reports adult-only prevalence (COPD, stroke, mental health), adult population ~52,000 (≥18 yrs, Census ACS 2024) was used as the base. For population-wide conditions (diabetes, cancer, SUD), full 64,565 was used.</p>
+<p>Total population 64,565; adult population 52,297 (≥18 yrs) (Census ACS 5-yr 2022). For conditions where CDC PLACES reports adult-only prevalence (COPD, stroke, mental health, CVD, SUD), adult population was used as the base. For population-wide conditions (diabetes, cancer), the full 64,565 was used.</p>
 
 <h3 class="sub">2.5 Economic parameters</h3>
-<p>Human capital: DALYs × $62,000 (Michigan GDP per capita 2024). VSL: HHS ASPE 2026 (central $13.4M), income-adjusted for Isabella County using elasticity 0.4 (Viscusi &amp; Aldy 2003): $13.4M × (55,237/80,000)^0.4 = <strong>$11.6M</strong> per statistical life. See <a href="roi.html" style="color:var(--blue)">ROI analysis</a> for intervention-level return estimates.</p>
+<p>Human capital: DALYs × $62,000 (Michigan GDP per capita 2024). VSL: HHS ASPE 2026 (central $13.4M), income-adjusted for Isabella County using elasticity 0.4 (Viscusi &amp; Aldy 2003): $13.4M × (46,000/80,000)^0.4 = <strong>$10.5M</strong> per statistical life (county median income $46,000 per ACS 2022). See <a href="roi.html" style="color:var(--blue)">ROI analysis</a> for intervention-level return estimates.</p>
 
 <!-- 3. Methods -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">3.</span> Analytic Methods</h2>
@@ -178,35 +179,35 @@ tbody td{padding:7px 10px;vertical-align:top;}
 
 <h3 class="sub">3.2 YLL calculation</h3>
 <div class="eq-box">YLL = Deaths × (L − Ā) <span class="eq-label">(2)</span></div>
-<p><em>L</em> = 78.6 years (Michigan LE 2024, MDHHS); <em>Ā</em> = mean age at death (condition-specific national proxy). Deaths estimated as rate/100,000 × population.</p>
+<p><em>L</em> = 78.6 years (Michigan LE 2024, MDHHS); <em>Ā</em> = mean age at death (condition-specific). Deaths estimated as (WONDER rate × rural adj.) / 100,000 × population.</p>
 <div class="warn-box">
-  <strong>YLL simplification.</strong> Standard GBD YLL = Σ<sub>a</sub> d(a) × ℓ(a) (age-specific deaths × remaining LE from reference table). The formula above assumes all deaths in a cause group occur at a single mean age — a planning approximation. CDC WONDER can provide age-specific county deaths for a proper computation. Future analyses should use that approach. Mean ages used: CVD 72 yrs; Cancer 68 yrs; SUD 45 yrs; COPD 73 yrs; Stroke 74 yrs; Diabetes 68 yrs (national CDC WONDER 2019–21 aggregates; county-specific values suppressed).
+  <strong>YLL simplification.</strong> Standard GBD YLL = Σ<sub>a</sub> d(a) × ℓ(a) (age-specific deaths × remaining LE from reference table). The formula above assumes all deaths in a cause group occur at a single mean age — a planning approximation. CDC WONDER can provide age-specific county deaths for a proper computation. Mean ages used: Mental Health 46 yrs; Cancer 67 yrs; SUD 44 yrs; CVD 72 yrs; COPD 73 yrs; Stroke 73 yrs; Diabetes 70 yrs (national CDC WONDER 2019–21 aggregates).
 </div>
 
 <h3 class="sub">3.3 YLD calculation</h3>
 <div class="eq-box">YLD = P × DW <span class="eq-label">(3)</span></div>
-<p><em>P</em> = prevalent cases; <em>DW</em> = WHO/IHME disability weight (moderate severity). Does not account for severity distributions, comorbidity adjustment, or uncertainty intervals. Incidence-based YLD would be preferable for conditions with well-characterized duration data but requires county-level incidence unavailable here.</p>
+<p><em>P</em> = prevalent cases (CDC PLACES 2024 prevalence × population base); <em>DW</em> = WHO/IHME GBD 2021 disability weight (moderate severity).</p>
 
 <h3 class="sub">3.4 Economic burden</h3>
-<p>Two methods with different conceptual frameworks: Human Capital captures productivity losses only; VSL reflects societal willingness to pay to prevent deaths. The ~6× difference between central estimates is methodologically expected, not an error. For grant applications use VSL (aligned with HHS/OMB); for academic GBD comparison use Human Capital.</p>
+<p>Two methods with different conceptual frameworks: Human Capital captures productivity losses only; VSL reflects societal willingness to pay to prevent deaths. The ~6–7× difference between central estimates is methodologically expected, not an error. For grant applications use VSL (aligned with HHS/OMB); for academic GBD comparison use Human Capital.</p>
 
 <!-- 4. Analytic Considerations -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">4.</span> Analytic Considerations</h2>
 
-<h3 class="sub">4.1 Mortality rate type — age-adjusted vs. crude</h3>
-<p>If MDHHS PCNA mortality rates are age-adjusted (common for geographic comparison dashboards), converting them to death counts by multiplying by county population is not mathematically valid — age-adjusted rates use a reference population structure, not the actual county structure. Death count estimates should be treated as indicative only. The PCNA documentation does not specify rate type for all indicators; this should be resolved before publication-grade use.</p>
+<h3 class="sub">4.1 Mental Health rank shift (v3 → v4)</h3>
+<p>The most significant change from the previous version (v3.0: 7,696 total DALYs) to this version (v4.0: 11,710 total DALYs) is the mental health estimate. CDC PLACES 2024 reports 29.8% adult prevalence of mental health conditions in Isabella County, compared to the ~15% estimate used previously (SAMHSA national proxy). This shift — from #4 to #1 — reflects more granular local data from the 2024 PLACES release. The earlier estimate was based on national averages; the new figure is county-specific modeled estimate. Analysts should note that CDC PLACES MH prevalence includes depression, anxiety, and other common conditions — a broader definition than severe mental illness.</p>
 
-<h3 class="sub">4.2 Mortality comparison arithmetic</h3>
-<p>Isabella vs. Michigan: (819.9 − 783.1) / 783.1 = <strong>+4.7%</strong>. Isabella vs. US: (819.9 − 723.6) / 723.6 = <strong>+13.3%</strong>. Earlier versions of this analysis used incorrect values (5% and 87% respectively), now corrected.</p>
+<h3 class="sub">4.2 Rural adjustment factors for mortality</h3>
+<p>Several cause-specific county mortality rates are suppressed in CDC WONDER (&lt;10 deaths/3-yr pooled). Rural adjustment factors were applied to state-level rates: SUD ×1.85, Mental Health ×1.40, CVD ×1.30, COPD ×1.35, Stroke ×1.25, Diabetes ×1.30, Cancer ×1.20. These factors are derived from MDHHS rural-urban mortality analyses and represent the average excess mortality in rural Michigan counties vs. state average. They introduce uncertainty (±30% for suppressed cells) that compounds the overall ±20% DALY uncertainty estimate.</p>
 
-<h3 class="sub">4.3 Poverty rate discrepancy</h3>
-<p>Three estimates exist for Isabella County: MDHHS 2020 PCNA 26.5% below 100% FPL; Census ACS 5-yr 2024: 21.9%; Census QuickFacts 2020–24: 19.0%. Sources differ in ACS vintage, reference year, and student-population treatment. CMU's ~14,000+ enrollment substantially inflates standard ACS poverty counts (students counted as residents in poverty without capturing parental support). All three estimates remain well above Michigan average; the range reflects measurement differences, not contradictions.</p>
+<h3 class="sub">4.3 Mortality rate type — age-adjusted vs. crude</h3>
+<p>If MDHHS PCNA mortality rates are age-adjusted (common for geographic comparison dashboards), converting them to death counts by multiplying by county population is not mathematically valid — age-adjusted rates use a reference population structure, not the actual county structure. Death count estimates should be treated as indicative only. This should be resolved before publication-grade use.</p>
 
-<h3 class="sub">4.4 Psychiatrist shortage ratio</h3>
+<h3 class="sub">4.4 Poverty rate discrepancy</h3>
+<p>Three estimates exist for Isabella County: MDHHS 2020 PCNA 26.5% below 100% FPL; Census ACS 5-yr 2024: 21.9%; Census QuickFacts 2020–24: 19.0%. Sources differ in ACS vintage, reference year, and student-population treatment. CMU's ~14,000+ enrollment substantially inflates standard ACS poverty counts. All three estimates remain well above Michigan average.</p>
+
+<h3 class="sub">4.5 Psychiatrist shortage ratio</h3>
 <p>The 176,938:1 ratio is a HRSA HPSA designation metric — FTE-weighted for the <em>Central Michigan Service Area</em> (multi-county). It exceeds Isabella County's total population (64,565) because the denominator is an administrative service-area construction, not a county headcount. Interpret as a severe shortage designation indicator, not a literal one-psychiatrist-per-176,938 county ratio.</p>
-
-<h3 class="sub">4.5 County rank disambiguation</h3>
-<p><strong>Health Status Rank 50/83</strong>: composite of health outcome indicators (mortality rates, disease prevalence, birth outcomes). <strong>Overall Rank 48/83</strong>: combines health status with social determinants (poverty, food insecurity, housing). These are distinct metrics from the same MDHHS 2020 PCNA — do not average or conflate them.</p>
 
 <!-- 5. Results Tables -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">5.</span> Results</h2>
@@ -214,31 +215,29 @@ tbody td{padding:7px 10px;vertical-align:top;}
 <h3 class="sub">5.1 Disease burden estimates</h3>
 <div class="tbl-wrap">
   <table>
-    <caption>Table 1. Estimated disease burden, Isabella County, Michigan, 2024. Michigan LE 78.6 yrs; no discounting or age-weighting. Uncertainty ±20% on all DALY estimates. For interactive version, see <a href="index.html">main dashboard →</a></caption>
+    <caption>Table 1. Estimated disease burden, Isabella County, Michigan, 2026. Data: CDC PLACES 2024 (prevalence), CDC WONDER 2020–22 × rural adj. (mortality), IHME GBD 2021 (DW). Michigan LE 78.6 yrs; no discounting or age-weighting. Uncertainty ±20% on all DALY estimates. For interactive version, see <a href="index.html">main dashboard →</a></caption>
     <thead>
       <tr>
         <th>Condition (ICD-10)</th><th>Prev. base</th><th>Cases</th>
-        <th>Mort. /100k</th><th>Deaths/yr</th><th>Mean age†</th>
-        <th>YLL</th><th>DW</th><th>YLD</th><th>DALYs</th><th>Quality</th>
+        <th>Deaths/yr†</th><th>Mean age</th>
+        <th>YLL</th><th>DW</th><th>YLD</th><th>DALYs</th><th>Rank</th><th>Quality</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>Cancer, all sites (C00–C97)</td><td>~2% total</td><td>1,290</td><td>175.1</td><td>113</td><td>68</td><td>1,198</td><td>0.30‡</td><td>387</td><td><strong>1,585</strong></td><td><span class="dc obs">Obs</span> <span class="dc mdl">Est DW</span></td></tr>
-      <tr><td>Substance Use Disorders (F10–F19)</td><td>~8% adults</td><td>5,200</td><td>~29.3§</td><td>~19</td><td>45</td><td>638</td><td>0.164</td><td>853</td><td><strong>1,491</strong></td><td><span class="dc imp">State proxy</span></td></tr>
-      <tr><td>Ischemic HD &amp; HF (I20–I51)</td><td>~7% adults</td><td>4,500</td><td>198.6</td><td>128</td><td>72</td><td>845</td><td>0.080</td><td>360</td><td><strong>1,205</strong></td><td><span class="dc obs">Obs</span> <span class="dc mdl">Mdl</span></td></tr>
-      <tr><td>Mental Health (F30–F48)</td><td>~15% adults</td><td>7,800</td><td>n/a¶</td><td>—</td><td>—</td><td>0¶</td><td>0.145</td><td>1,131</td><td><strong>1,131</strong></td><td><span class="dc sup">YLL suppressed</span></td></tr>
-      <tr><td>COPD (J44)</td><td>~7% adults</td><td>3,800</td><td>60.6</td><td>39</td><td>73</td><td>218</td><td>0.225</td><td>855</td><td><strong>1,073</strong></td><td><span class="dc obs">Obs</span> <span class="dc mdl">Mdl</span></td></tr>
-      <tr><td>Stroke (I60–I69)</td><td>~3% adults</td><td>1,600</td><td>59.4</td><td>38</td><td>74</td><td>175</td><td>0.316</td><td>506</td><td><strong>681</strong></td><td><span class="dc obs">Obs</span> <span class="dc mdl">Mdl</span></td></tr>
-      <tr><td>Type 2 Diabetes (E11)</td><td>8.5% total</td><td>5,490</td><td>31.1</td><td>20</td><td>68</td><td>212</td><td>0.058</td><td>318</td><td><strong>530</strong></td><td><span class="dc obs">Obs</span> <span class="dc obs">County</span></td></tr>
-      <tr class="total-row"><td><strong>Total</strong></td><td>—</td><td>—</td><td>—</td><td>~357</td><td>—</td><td><strong>3,286</strong></td><td>—</td><td><strong>4,410</strong></td><td><strong>7,696</strong></td><td>—</td></tr>
+      <tr><td><strong>Mental Health (F30–F48)</strong></td><td>29.8% adults</td><td>15,585</td><td>~14</td><td>46</td><td>453</td><td>0.145</td><td>2,260</td><td><strong>2,713</strong></td><td><strong>#1</strong></td><td><span class="dc obs">CDC PLACES</span> <span class="dc mdl">DW: IHME</span></td></tr>
+      <tr><td>Cancer, all sites (C00–C97)</td><td>7.7% total</td><td>4,027</td><td>~130</td><td>67</td><td>1,509</td><td>0.294‡</td><td>1,184</td><td><strong>2,693</strong></td><td>#2</td><td><span class="dc obs">WONDER 2020-22</span> <span class="dc mdl">DW comp.</span></td></tr>
+      <tr><td>Substance Use Disorders (F10–F19)</td><td>7.2% adults</td><td>3,755</td><td>~37</td><td>44</td><td>1,280</td><td>0.329</td><td>1,235</td><td><strong>2,516</strong></td><td>#3</td><td><span class="dc imp">WONDER × rural adj.</span></td></tr>
+      <tr><td>Cardiovascular Disease (I20–I51)</td><td>7.1% adults</td><td>3,692</td><td>~178</td><td>72</td><td>1,174</td><td>0.070</td><td>258</td><td><strong>1,432</strong></td><td>#4</td><td><span class="dc obs">WONDER 2020-22</span> <span class="dc mdl">Derived</span></td></tr>
+      <tr><td>COPD &amp; Respiratory (J44)</td><td>8.2% adults</td><td>4,288</td><td>~44</td><td>73</td><td>244</td><td>0.198</td><td>849</td><td><strong>1,093</strong></td><td>#5</td><td><span class="dc obs">WONDER 2020-22</span> <span class="dc obs">CDC PLACES</span></td></tr>
+      <tr><td>Stroke (I60–I69)</td><td>3.2% adults</td><td>1,674</td><td>~34</td><td>73</td><td>188</td><td>0.316</td><td>529</td><td><strong>717</strong></td><td>#6</td><td><span class="dc obs">WONDER 2020-22</span> <span class="dc obs">CDC PLACES</span></td></tr>
+      <tr><td>Type 2 Diabetes (E11)</td><td>11.6% total</td><td>6,066</td><td>~25</td><td>70</td><td>218</td><td>0.054</td><td>328</td><td><strong>545</strong></td><td>#7</td><td><span class="dc obs">CDC PLACES</span></td></tr>
+      <tr class="total-row"><td><strong>Total</strong></td><td>—</td><td>—</td><td>~461</td><td>—</td><td><strong>5,067</strong></td><td>—</td><td><strong>6,643</strong></td><td><strong>11,710</strong></td><td>—</td><td>—</td></tr>
     </tbody>
   </table>
   <div class="tbl-note">
-    † National proxy from CDC WONDER 2019–21 aggregates; county-specific values suppressed (small N).<br>
-    ‡ Cancer DW: weighted composite from MDHHS 2020 site distribution; WHO/IHME does not publish single aggregate all-cancer DW.<br>
-    § SUD mortality suppressed in CDC WONDER; Michigan state rate (29.3/100k, MDHHS 2020) applied as proxy.<br>
-    ¶ Suicide mortality suppressed in CDC WONDER; YLL = 0 results in underestimation of true MH DALY burden.<br>
-    Population bases: adult pop ~52,000 for COPD, stroke, MH (CDC PLACES adult-only); total pop 64,565 for cancer, diabetes, SUD.
+    † Deaths estimated from CDC WONDER 2020–22 county-level counts with rural adjustment factors for suppressed cells. Total deaths 461 include all 7 conditions; some overlap possible for multi-morbid patients.<br>
+    ‡ Cancer DW: weighted composite from MDHHS 2020 site distribution. WHO/IHME does not publish single aggregate all-cancer DW.<br>
+    Population bases: adult pop 52,297 for COPD, stroke, MH, CVD, SUD (CDC PLACES adult-only); total pop 64,565 for cancer, diabetes.
   </div>
 </div>
 
@@ -268,15 +267,17 @@ tbody td{padding:7px 10px;vertical-align:top;}
       <tr><td>Below poverty line (Census ACS 5-yr)</td><td>21.9%</td><td>—</td><td>12.5%</td><td>Census ACS 2024</td></tr>
       <tr><td>Below poverty line (QuickFacts)</td><td>19.0%</td><td>—</td><td>—</td><td>QuickFacts 2020–24</td></tr>
       <tr><td>Food insecurity</td><td>16.4%</td><td>13.7%</td><td>12.5%</td><td>MDHHS 2020</td></tr>
-      <tr><td>Adult obesity (BMI ≥30)</td><td>38.5%</td><td>36.7%</td><td>35.3%</td><td>County Health Rankings 2025</td></tr>
+      <tr><td>Adult obesity (BMI ≥30)</td><td>43.1%</td><td>36.7%</td><td>35.3%</td><td>CDC PLACES 2024</td></tr>
+      <tr><td>Current smoking (adults)</td><td>18.6%</td><td>—</td><td>14.0%</td><td>CDC PLACES 2024</td></tr>
       <tr><td>Maternal tobacco use</td><td>22.0%</td><td>14.3%</td><td>6.5%</td><td>MDHHS 2020</td></tr>
-      <tr><td>Uninsured (&lt;65 yrs)</td><td>7.7%</td><td>6.1%</td><td>10.6%</td><td>MDHHS 2020</td></tr>
+      <tr><td>Uninsured (&lt;65 yrs)</td><td>7.9%</td><td>6.1%</td><td>10.6%</td><td>CDC PLACES 2024</td></tr>
+      <tr><td>Hypertension (adults)</td><td>32.1%</td><td>—</td><td>—</td><td>CDC PLACES 2024</td></tr>
       <tr><td>NAS rate (per 100k live births)</td><td>583.1</td><td>835.8</td><td>n/a</td><td>MDHHS 2020</td></tr>
       <tr><td>MH/SUD hospitalization (/100k)</td><td>3,420</td><td>3,676</td><td>3,088</td><td>MDHHS 2020</td></tr>
       <tr><td>Psychiatrist HPSA ratio‖</td><td>176,938:1</td><td>9,371:1</td><td>—</td><td>HRSA 2020</td></tr>
     </tbody>
   </table>
-  <div class="tbl-note">‖ HRSA FTE-weighted for Central Michigan Service Area (multi-county). See Section 4.4 — not a simple county headcount.</div>
+  <div class="tbl-note">‖ HRSA FTE-weighted for Central Michigan Service Area (multi-county). See Section 4.5 — not a simple county headcount.</div>
 </div>
 
 <h3 class="sub">5.4 Economic burden</h3>
@@ -285,31 +286,33 @@ tbody td{padding:7px 10px;vertical-align:top;}
     <caption>Table 4. Economic burden, two methods. See Section 3.4 and <a href="roi.html">ROI analysis page</a> for intervention-level estimates.</caption>
     <thead><tr><th>Method</th><th>Formula</th><th>Central estimate</th><th>Range</th><th>Measures</th></tr></thead>
     <tbody>
-      <tr><td>Human Capital</td><td>7,696 × $62,000</td><td><strong>~$477M/yr</strong></td><td>~$382M–$572M (±20%)</td><td>Indirect productivity losses</td></tr>
-      <tr><td>VSL (HHS 2026)</td><td>357 deaths × $11.6M</td><td><strong>~$4.1B/yr</strong></td><td>$1.9B–$6.3B (HHS low/high)</td><td>Societal willingness to pay</td></tr>
+      <tr><td>Human Capital</td><td>11,710 × $62,000</td><td><strong>~$726M/yr</strong></td><td>~$581M–$871M (±20%)</td><td>Indirect productivity losses</td></tr>
+      <tr><td>VSL (HHS 2026)</td><td>461 deaths × $10.5M</td><td><strong>~$4.9B/yr</strong></td><td>$2.3B–$7.5B (HHS low/high)</td><td>Societal willingness to pay</td></tr>
     </tbody>
   </table>
-  <div class="tbl-note">VSL: $13.4M × (55,237/80,000)^0.4 = $11.6M (income elasticity 0.4, Viscusi &amp; Aldy 2003). HHS ASPE Standard Values 2026.</div>
+  <div class="tbl-note">VSL: $13.4M × (46,000/80,000)^0.4 = $10.5M income-adjusted (county median income $46,000, ACS 2022; elasticity 0.4, Viscusi &amp; Aldy 2003). HHS ASPE Standard Values 2026.</div>
 </div>
 
 <!-- 6. Discussion -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">6.</span> Discussion</h2>
 
-<p>The most prominent findings are: (1) severe mental health access deficit under any measurement approach; (2) stroke mortality 49% above Michigan average — the largest relative gap among tracked conditions; (3) substantial maternal tobacco and prenatal opioid burden predicting intergenerational health effects. All are tractable with evidence-based interventions.</p>
+<p>The most significant finding in the 2025 data update is the emergence of mental health as the #1 DALY burden condition in Isabella County, driven by CDC PLACES 2024 reporting 29.8% adult prevalence — nearly double the prior estimate. This shift from #4 to #1 is methodologically important: it reflects a change in the underlying prevalence data source (SAMHSA national proxy → CDC PLACES county-modeled), not necessarily a true change in community health. Both estimates represent modeled values, but the CDC PLACES estimate is county-specific and should be considered more accurate for local planning.</p>
 
-<p>Using Michigan's observed life expectancy (78.6 yrs) rather than the WHO/IHME normative standard (88.9 yrs) substantially changes rankings. Under local LE, substance use disorders rise to #2 because SUD kills at ~45 years (33.6 years remaining) while cardiovascular disease kills at ~72 (only 6.6 years remaining). This ranking is more policy-relevant for local planning because it prioritizes conditions causing the most years lost relative to what residents actually live.</p>
+<p>Cancer remains the second-largest burden (2,693 DALYs) with the highest absolute YLL component (1,509), reflecting 130 deaths per year at mean age 67. Substance use disorders remain the third-highest burden and continue to have the highest years lost per death (34.6 years remaining at mean age 44).</p>
 
-<p>The poverty data discrepancy (19–26.5%) reflects real measurement complexity from CMU's student population, not data error. Analysts should consider a sensitivity analysis excluding the 18–24 age group to better characterize structural community poverty.</p>
+<p>The total DALY estimate of 11,710 represents a 52% increase from the prior version (7,696), attributable primarily to the mental health prevalence revision (+1,582 DALYs) and updated cancer and SUD estimates from newer CDC WONDER data. All DALY estimates carry ±20% uncertainty.</p>
+
+<p>Using Michigan's observed life expectancy (78.6 yrs) rather than the WHO/IHME normative standard (88.9 yrs) is more policy-relevant for local planning because it prioritizes conditions causing the most years lost relative to what residents actually live. Under WHO/IHME standard, SUD would rise further given deaths at age 44 vs. LE 88.9 = 44.9 years remaining.</p>
 
 <!-- 7. Recommendations for Future Work -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">7.</span> Recommendations for Future Analysis</h2>
 
 <p><strong>1. Age-specific YLL.</strong> Query CDC WONDER for Isabella County deaths by 5-year age group and ICD-10 cause (3–5 year pool, e.g., 2020–2024). Apply WHO reference life table for proper age-specific YLL.</p>
-<p><strong>2. Post-COVID mortality update.</strong> MDHHS 2020 predates pandemic and the recent opioid mortality surge. Incorporate 2023–2024 county data when available.</p>
+<p><strong>2. Post-COVID mortality update.</strong> MDHHS 2020 PCNA predates pandemic and the recent opioid mortality surge. Incorporate 2023–2024 county data when available.</p>
 <p><strong>3. Severity-stratified YLD.</strong> Split prevalence into mild/moderate/severe using GBD severity distributions instead of single moderate-severity DW.</p>
-<p><strong>4. Uncertainty quantification.</strong> Monte Carlo propagation of input uncertainty (mortality rate, prevalence, DW) to produce 95% uncertainty intervals at condition level.</p>
-<p><strong>5. Student population sensitivity.</strong> Poverty analysis with and without 18–24 CMU population to separate student vs. structural community poverty.</p>
-<p><strong>6. GBD 2023 alignment.</strong> Published Oct 2025 in <em>The Lancet</em>. Verify if disability weights or reference LE changed vs. GBD 2021 and update accordingly.</p>
+<p><strong>4. Mental health validation.</strong> The 29.8% MH prevalence (CDC PLACES 2024) warrants triangulation against BRFSS, SAMHSA NSDUH state estimates, and administrative claims data to confirm county-level estimate is not an artifact of model extrapolation.</p>
+<p><strong>5. Uncertainty quantification.</strong> Monte Carlo propagation of input uncertainty (mortality rate, rural adj. factor, prevalence, DW) to produce 95% uncertainty intervals at condition level.</p>
+<p><strong>6. Student population sensitivity.</strong> Poverty and MH analysis with and without 18–24 CMU population to separate student vs. structural community burden.</p>
 
 <!-- 8. References -->
 <h2 class="sec"><span style="color:var(--blue);margin-right:6px">8.</span> References</h2>
@@ -317,9 +320,9 @@ tbody td{padding:7px 10px;vertical-align:top;}
   <li>Michigan MDHHS. <em>2020 Primary Care Needs Assessment: Isabella County Profile (Rank 48)</em>. MDHHS; 2020.</li>
   <li>IHME. <em>Global Burden of Disease Study 2021: Disability Weights</em>. Seattle: IHME; 2022. <a href="https://ghdx.healthdata.org/gbd-2021" target="_blank">ghdx.healthdata.org/gbd-2021</a></li>
   <li>GBD 2023 Collaborators. Global burden of 292 causes of death, 1990–2023. <em>The Lancet.</em> 2025;406(10):2160–2203.</li>
-  <li>U.S. Census Bureau. ACS 5-Year Estimates 2024. Isabella County, MI. <a href="https://data.census.gov" target="_blank">data.census.gov</a></li>
-  <li>CDC. PLACES: Local Data for Better Health, 2024. <a href="https://www.cdc.gov/places" target="_blank">cdc.gov/places</a></li>
-  <li>CDC. WONDER: Underlying Cause of Death. <a href="https://wonder.cdc.gov" target="_blank">wonder.cdc.gov</a></li>
+  <li>U.S. Census Bureau. ACS 5-Year Estimates 2022. Isabella County, MI. <a href="https://data.census.gov" target="_blank">data.census.gov</a></li>
+  <li>CDC. PLACES: Local Data for Better Health, 2024 release. <a href="https://www.cdc.gov/places" target="_blank">cdc.gov/places</a></li>
+  <li>CDC. WONDER: Underlying Cause of Death, 2020–2022. <a href="https://wonder.cdc.gov" target="_blank">wonder.cdc.gov</a></li>
   <li>MDHHS. Life Expectancy at Birth by Sex, Michigan, 2024. <a href="https://www.mdch.state.mi.us/osr/deaths/lifeUSMI.asp" target="_blank">mdch.state.mi.us/osr/deaths/lifeUSMI.asp</a></li>
   <li>University of Wisconsin Population Health Institute. County Health Rankings 2025. <a href="https://www.countyhealthrankings.org" target="_blank">countyhealthrankings.org</a></li>
   <li>HHS ASPE. <em>Standard Values for Regulatory Analysis, 2026.</em> January 2026.</li>
@@ -328,7 +331,7 @@ tbody td{padding:7px 10px;vertical-align:top;}
 </ol>
 
 <div class="doc-footer">
-  <strong>Document status:</strong> Supplementary methods for planning purposes. Not peer-reviewed. Incorporates corrections from internal scientific review and external independent audit (June 2026).<br>
+  <strong>Document status:</strong> Version 4.0 — updated with CDC PLACES 2024 and CDC WONDER 2020–22. Supplementary methods for planning purposes. Not peer-reviewed.<br>
   <strong>Author:</strong> Sergey Soshnikov, MD, PhD · <a href="mailto:ssoshmail@gmail.com" style="color:var(--blue)">ssoshmail@gmail.com</a> · Central Michigan University · Soshnikov<br>
   <strong>Related pages:</strong> <a href="index.html" style="color:var(--blue)">Interactive Dashboard</a> · <a href="Isabella_County_AI_Solutions.html" style="color:var(--blue)">AI Solutions</a> · <a href="roi.html" style="color:var(--blue)">ROI Analysis</a><br>
   © 2026 Soshnikov
