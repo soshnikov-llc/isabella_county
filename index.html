@@ -198,6 +198,34 @@ header{
 }
 
 
+/* ── DATA SOURCES STRIP ── */
+.ds-strip{
+  background:#f1f5f9;
+  border-bottom:1px solid var(--border);
+}
+.ds-inner{
+  max-width:1160px;margin:0 auto;padding:16px 32px;
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.ds-label{
+  font-size:9.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;color:var(--slate);white-space:nowrap;flex-shrink:0;
+}
+.ds-grid{
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;
+}
+.ds-item{
+  display:flex;flex-direction:column;
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:6px;padding:5px 10px;min-width:0;
+}
+.ds-name{
+  font-size:11px;font-weight:600;color:var(--navy);line-height:1.3;
+}
+.ds-desc{
+  font-size:9.5px;color:var(--muted);line-height:1.3;
+}
+
 /* ── ABOUT SECTION ── */
 .about-strip{
   background:var(--surface);
@@ -614,7 +642,7 @@ footer{background:var(--navy);padding:22px 32px;}
         </div>
       </div>
 
-      <p class="hero-abstract">Educational disability-adjusted life year (DALY) analysis for rural Michigan counties using open CDC and US Census data sources. Methodology adapted from IHME GBD 2021 disability weights and WHO Global Health Estimates reference standards for educational and health-planning purposes. Not a formal Global Burden of Disease estimate.</p>
+      <p class="hero-abstract">Disability-adjusted life year (DALY) burden analysis for rural Michigan counties — built for county health planning, CHNA reports, and grant applications (SAMHSA, HRSA, MDHHS). Open CDC and US Census data sources; disability weights adapted from IHME GBD 2021 and WHO reference standards.</p>
 
       <div class="hero-stats">
         <div class="hs">
@@ -648,7 +676,48 @@ footer{background:var(--navy);padding:22px 32px;}
     </div>
     <div class="about-text">
       <strong>About this project</strong>
-      <p>This series provides educational disability-adjusted life year (DALY) analyses for rural Michigan counties, using open-access data from the CDC PLACES program, CDC WONDER mortality files, and US Census Bureau American Community Survey estimates. Disability weights are adapted from the IHME Global Burden of Disease Study 2021 and WHO Global Health Estimates reference standards; analyses are designed for educational and health-planning purposes and do not constitute a formal GBD estimate or peer-reviewed epidemiological study. Results are intended to support county health needs assessments, grant applications, and public health workforce training.</p>
+      <p>This series quantifies disease burden for rural Michigan counties using disability-adjusted life years (DALYs) — a metric that combines premature mortality and years lived with disability into a single, actionable measure. Data sources: CDC PLACES 2023, CDC WONDER 2020–22 mortality files, and US Census Bureau ACS estimates. Disability weights adapted from IHME GBD 2021. Analyses are designed for county health needs assessments, grant applications, and public health planning — not as formal GBD estimates or peer-reviewed epidemiological studies.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ DATA SOURCES STRIP ══ -->
+<div class="ds-strip">
+  <div class="ds-inner">
+    <span class="ds-label">Data sources</span>
+    <div class="ds-grid">
+      <div class="ds-item">
+        <div class="ds-name">CDC PLACES 2023</div>
+        <div class="ds-desc">Prevalence · 12 conditions</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">CDC WONDER 2020–22</div>
+        <div class="ds-desc">Mortality · cause-of-death</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">IHME GBD 2021</div>
+        <div class="ds-desc">Disability weights · DW</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">US Census ACS 2022</div>
+        <div class="ds-desc">Demographics · SDOH</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">County Health Rankings</div>
+        <div class="ds-desc">500+ health indicators</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">Michigan DHHS</div>
+        <div class="ds-desc">Vital stats · YPLL · mortality</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">MyMichigan CHNA</div>
+        <div class="ds-desc">Community health needs</div>
+      </div>
+      <div class="ds-item">
+        <div class="ds-name">IRS 990 Schedule H</div>
+        <div class="ds-desc">Hospital community benefit</div>
+      </div>
     </div>
   </div>
 </div>
@@ -666,7 +735,7 @@ footer{background:var(--navy);padding:22px 32px;}
   <div class="county-grid">
 
     <!-- Isabella County -->
-    <a class="county-card" href="isabella.html" style="--accent:var(--blue)">
+    <div class="county-card" onclick="window.location='isabella.html'" style="--accent:var(--blue);cursor:pointer">
       <div class="county-card-top"></div>
       <div class="cc-head">
         <div>
@@ -716,10 +785,10 @@ footer{background:var(--navy);padding:22px 32px;}
           <a href="isabella_trends.html">Trends</a>
         </div>
       </div>
-    </a>
+    </div>
 
     <!-- Clare County -->
-    <a class="county-card" href="clare.html" style="--accent:var(--red)">
+    <div class="county-card" onclick="window.location='clare.html'" style="--accent:var(--red);cursor:pointer">
       <div class="county-card-top"></div>
       <div class="cc-head">
         <div>
@@ -768,10 +837,10 @@ footer{background:var(--navy);padding:22px 32px;}
           <a href="clare_ai_solutions.html">Interventions</a>
         </div>
       </div>
-    </a>
+    </div>
 
     <!-- Midland County -->
-    <a class="county-card" href="midland.html" style="--accent:var(--green)">
+    <div class="county-card" onclick="window.location='midland.html'" style="--accent:var(--green);cursor:pointer">
       <div class="county-card-top"></div>
       <div class="cc-head">
         <div>
@@ -818,7 +887,7 @@ footer{background:var(--navy);padding:22px 32px;}
           <a href="midland_roi.html">Economic Impact</a>
         </div>
       </div>
-    </a>
+    </div>
 
   </div><!-- end county-grid -->
 
@@ -918,36 +987,27 @@ footer{background:var(--navy);padding:22px 32px;}
 
 </div><!-- end .main -->
 
-<!-- ══ CTA STRIP ══ -->
-<div class="cta-strip">
-  <div class="cta-strip-inner">
-    <div class="cta-text">
-      <h3>Is your county next?</h3>
-      <p>Each analysis produces a full DALY burden profile, economic impact model, and AI intervention roadmap &mdash; ready for CHNA reports, grant applications (SAMHSA, HRSA, MDHHS), and county health department planning.</p>
-    </div>
-    <a class="cta-btn" href="mailto:biososh@gmail.com?subject=County%20Health%20Burden%20Analysis%20Inquiry">
-      Request an analysis
-      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-    </a>
-  </div>
-</div>
 
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <span>Lakes Linked Care &middot; Dr. Sergey Soshnikov, MD PhD &middot; Public Health Division &middot; Central Michigan University &middot; 2026</span>
-      <span><a href="mailto:biososh@gmail.com">biososh@gmail.com</a></span>
+      <span>Central Michigan University &middot; Mount Pleasant, Michigan</span>
     </div>
     <div class="footer-sources">
       <span class="footer-sources-label">Data sources</span>
-      <span class="src-badge">CDC PLACES 2024</span>
+      <span class="src-badge">CDC PLACES 2023</span>
       <span class="src-badge">CDC WONDER 2020&ndash;22</span>
       <span class="src-badge">IHME GBD 2021</span>
       <span class="src-badge">ACS 2022</span>
+      <span class="src-badge">County Health Rankings</span>
+      <span class="src-badge">Michigan DHHS</span>
+      <span class="src-badge">MyMichigan CHNA</span>
+      <span class="src-badge">IRS 990-H</span>
     </div>
     <div class="footer-disclaimer">
-      Planning-grade educational analysis &mdash; not a peer-reviewed study or formal GBD estimate. Disability weights adapted from IHME GBD 2021 for educational purposes. County data from open CDC and US Census Bureau sources. Results should not be used as a sole basis for clinical or policy decisions without independent review.
+      Planning-grade burden analysis &mdash; not a peer-reviewed study or formal GBD estimate. Disability weights adapted from IHME GBD 2021. County data from CDC PLACES 2023, CDC WONDER 2020–22, and US Census Bureau ACS. Results are intended to support health planning and grant development; independent review is recommended before clinical or policy decisions.
     </div>
   </div>
 </footer>
