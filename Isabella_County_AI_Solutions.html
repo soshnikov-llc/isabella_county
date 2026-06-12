@@ -109,6 +109,27 @@ p { margin-bottom: 10px; }
 .refs a { color: var(--blue); }
 
 footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 11px; color: #888; line-height: 1.7; }
+
+/* LE Standard Toggle */
+.le-toggle-bar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  position: sticky;
+  top: 48px;
+  z-index: 98;
+}
+.le-toggle-bar .lbl { font-weight: 700; color: var(--navy); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
+.le-btn { background: var(--bg); border: 1.5px solid var(--border); border-radius: 6px; padding: 5px 14px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all .15s; color: #374151; }
+.le-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+.le-note { font-size: 11px; color: var(--muted); margin-left: 8px; }
+.flash-val { transition: color .2s; }
+@keyframes flash { 0%,100%{opacity:1}50%{opacity:.3} }
+.flashing { animation: flash .35s; }
 </style>
 </head>
 <body>
@@ -124,55 +145,62 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
   </div>
 </nav>
 
+<div class="le-toggle-bar">
+  <span class="lbl">DALY Standard:</span>
+  <button class="le-btn active" id="btn-mi" onclick="setStandard('mi')">MI Planning · 78.6 yrs</button>
+  <button class="le-btn" id="btn-gbd" onclick="setStandard('gbd')">GBD/WHO Frontier · 89.1 yrs</button>
+  <span class="le-note" id="le-note">Michigan observed LE · planning-grade estimate · Mental health #1</span>
+</div>
+
 <div class="running-hd">
   <span>Soshnikov · Isabella County · AI &amp; Digital Health Applications · 2026</span>
-  <span>Supplementary - Problem-Solution Framework</span>
+  <span>Primary burden: 15,430 DALYs (frontier LE) · Sensitivity (MI LE): 10,579 DALYs/yr</span>
 </div>
 
 <div class="doc">
 
 <div class="title-block">
-  <div class="label">Supplement 2 - Technology &amp; Innovation · v4.0 (2025 Data Update)</div>
+  <div class="label">Supplement 2 - Technology &amp; Innovation · v5.0 (2026 Data Update)</div>
   <h1>Artificial Intelligence and Digital Health Technologies for Community Disease Burden Reduction in Isabella County, Michigan</h1>
   <div class="subtitle">A problem-solution framework aligned with local burden estimates, 2026</div>
   <div class="authors">Sergey Soshnikov</div>
-  <div class="meta-line">Companion document to: Disease Burden Analysis, Isabella County, Michigan (v4.0) · June 2026 · Data: CDC PLACES 2024 · CDC WONDER 2020–22 · For community planning and grant development</div>
+  <div class="meta-line">Companion document to: Disease Burden Analysis, Isabella County, Michigan (v5.0) · June 2026 · Data: CDC PLACES 2024 · CDC WONDER 2020–22 · For community planning and grant development</div>
 </div>
 
 <div class="abstract">
   <h2>Summary</h2>
-  <p>This supplement maps the disease burden priorities identified in the Isabella County health analysis (11,710 estimated DALYs/year; CDC PLACES 2024, CDC WONDER 2020–22) to specific artificial intelligence and digital health interventions supported by current evidence. The county's dominant challenges - mental health disorders (29.8% adult prevalence, HRSA HPSA designation, #1 burden at 2,713 DALYs), substance use disorders (#3 burden at 2,516 DALYs), and structural poverty as the root driver - are precisely the domains where AI-augmented care has demonstrated the most scalable impact in rural and underserved settings. For each priority condition, we describe the intervention, the supporting evidence, the implementation pathway for a county of 64,565 residents, and the realistic expectation for burden reduction. We also outline a phased implementation roadmap and note where it creates a distinctive opportunity to lead or support these initiatives in the region.</p>
+  <p>This supplement maps the disease burden priorities identified in the Isabella County health analysis (<span id="total-dalys">15,430</span> primary DALYs/year, 95% UI 14,459–16,481; frontier LE + MH remission-adj; CDC PLACES 2024, CDC WONDER 2020–22, Monte Carlo n=10,000) to artificial intelligence and digital health interventions supported by current evidence. The county's leading burdens are cancer (#1, 4,057 DALYs), cardiovascular disease (#2, 3,302), substance use disorders (#3, 2,904), and mental health (#4, 1,733 DALYs remission-adj). Mental health access (HRSA HPSA designation, 176,938:1 psychiatrist ratio) and structural poverty as the root driver - are areas where digital tools may improve reach, but the strength of evidence varies substantially by intervention. For each priority condition, we describe the intervention, the supporting evidence, the implementation pathway for a county of 64,565 residents, and the realistic expectation for burden reduction. Several burden inputs rely on modeled prevalence or rural-adjusted mortality proxies, so all estimates should be treated as planning-grade rather than validated county burden measurements.</p>
 </div>
 
 <!-- Spotlight -->
 <div class="spotlight">
   <h3>Why AI matters specifically for Isabella County</h3>
-  <p>The county's defining constraint is <em>not</em> the absence of knowledge about what works - evidence-based interventions exist for every priority condition. The constraint is <strong>workforce and access</strong>: one psychiatrist per 176,938 residents, a Primary Care HPSA designation, and 19% of residents below the poverty line. This is exactly the profile where AI-augmented care has shown its largest gains. AI does not replace clinicians - it multiplies their reach, speeds triage, and brings specialist-level screening to primary care and community settings where specialists are absent.</p>
+  <p>The county's defining constraint is <em>not</em> the absence of plausible interventions - tools exist for every priority condition, but the strength of evidence varies by condition and delivery model. The constraint is <strong>workforce and access</strong>: one psychiatrist per 176,938 residents, a Primary Care HPSA designation, and 19% of residents below the poverty line. AI does not replace clinicians - it can help prioritize caseloads, speed triage, and extend monitoring in primary care and community settings where specialists are absent.</p>
 </div>
 
 <!-- Section 1 -->
 <h2 class="sec">1. AI Applications by Condition Priority</h2>
-<p>The following cards are ordered by estimated DALY burden (CDC PLACES 2024 · CDC WONDER 2020–22 · Michigan LE 2024 method). For each condition, interventions are rated by evidence strength: <span class="ev strong">Strong</span> = RCT evidence; <span class="ev mod">Moderate</span> = observational/pilot evidence; <span class="ev emrg">Emerging</span> = promising early-stage.</p>
+<p>The following cards are ordered by primary estimated DALY burden (CDC PLACES 2024 · CDC WONDER 2020–22 · <span id="order-note">ordered by primary standard (frontier LE + remission-adj) · Cancer #1</span>). Monte Carlo simulation (n=10,000) propagates uncertainty from mortality (Poisson), prevalence (beta), and disability weights (±15–25%): 95% UI 14,459–16,481. Total primary burden: 15,430 DALYs. For each condition, interventions are rated by evidence strength: <span class="ev strong">Strong</span> = RCT/meta-analysis evidence; <span class="ev mod">Moderate</span> = mixed, indirect, or implementation evidence; <span class="ev emrg">Emerging</span> = promising early-stage.</p>
 
 <div class="ps-grid">
 
-  <!-- MENTAL HEALTH - #1 -->
+  <!-- MENTAL HEALTH - #4 (remission-adj primary) -->
   <div class="ps-card mental">
     <div class="ps-head">
       <span class="ps-icon">🧠</span>
       <div class="ps-title">
         <h4>Mental Health Disorders (F30–F48)</h4>
-        <p>HPSA designation · 176,938:1 psychiatrist ratio · 29.8% adult prevalence (CDC PLACES 2024) · #1 burden</p>
+        <p>HPSA designation · 176,938:1 psychiatrist ratio · 29.8% adult prevalence (CDC PLACES 2024) · #4 burden (remission-adj)</p>
       </div>
-      <div class="ps-burden"><div class="daly">2,713</div><div class="lbl">DALYs/yr · #1</div></div>
+      <div class="ps-burden"><div class="daly flash-val" id="daly-mental">1,733</div><div class="lbl">DALYs/yr · <span class="flash-val" id="rank-mental">#4</span></div></div>
     </div>
     <div class="ps-body">
       <div class="ai-items">
         <div class="ai-item">
           <div class="ai-tag" style="color:#7c3aed">Telepsychiatry</div>
           <h5>AI-augmented collaborative care model</h5>
-          <p>The IMPACT collaborative care model (strong RCT evidence) pairs primary care with a behavioral health care manager supported by a consulting psychiatrist - now enhanced with AI for caseload prioritization, outcome tracking, and between-visit check-ins. One psychiatrist can effectively supervise 5–8× more patients via this model versus direct care.</p>
-          <span class="ev strong">Strong evidence</span>
+          <p>Primary-care collaborative care pairs a behavioral health care manager with psychiatric consultation and can be augmented with AI for caseload prioritization, outcome tracking, and between-visit check-ins. Recent Cochrane evidence for severe mental illness is cautious rather than strongly positive, so this option should be treated as a workforce-access model requiring local evaluation, not as a guaranteed high-ROI intervention.</p>
+          <span class="ev mod">Moderate evidence</span>
         </div>
         <div class="ai-item">
           <div class="ai-tag" style="color:#7c3aed">Digital Therapeutics</div>
@@ -196,15 +224,15 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
     </div>
   </div>
 
-  <!-- CANCER - #2 -->
+  <!-- CANCER - #1 -->
   <div class="ps-card cancer">
     <div class="ps-head">
       <span class="ps-icon">🔬</span>
       <div class="ps-title">
         <h4>Cancer - All Sites (C00–C97)</h4>
-        <p>#2 DALY condition · 130 deaths/yr at age 67 · Early detection gap in rural settings</p>
+        <p>#1 DALY condition · 130 deaths/yr at age 67 · Early detection gap in rural settings</p>
       </div>
-      <div class="ps-burden"><div class="daly">2,693</div><div class="lbl">DALYs/yr · #2</div></div>
+      <div class="ps-burden"><div class="daly flash-val" id="daly-cancer">4,057</div><div class="lbl">DALYs/yr · <span class="flash-val" id="rank-cancer">#1</span></div></div>
     </div>
     <div class="ps-body">
       <div class="ai-items">
@@ -244,7 +272,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
         <h4>Substance Use Disorders (F10–F19)</h4>
         <p>#3 by DALYs · 37 deaths/yr at age ~44 · NAS rate 583/100k births · Rural adjustment ×1.85</p>
       </div>
-      <div class="ps-burden"><div class="daly">2,516</div><div class="lbl">DALYs/yr · #3</div></div>
+      <div class="ps-burden"><div class="daly flash-val" id="daly-sud">2,904</div><div class="lbl">DALYs/yr · <span class="flash-val" id="rank-sud">#3</span></div></div>
     </div>
     <div class="ps-body">
       <div class="ai-items">
@@ -284,7 +312,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
         <h4>Cardiovascular Disease &amp; Stroke (I20–I69)</h4>
         <p>Stroke mortality 49% above state avg · 32.1% hypertension (CDC PLACES 2024) · CVD #4, Stroke #6</p>
       </div>
-      <div class="ps-burden"><div class="daly">2,149</div><div class="lbl">DALYs/yr · CVD+Stroke</div></div>
+      <div class="ps-burden"><div class="daly flash-val" id="daly-cvd">4,375</div><div class="lbl">DALYs/yr · CVD+Stroke · <span class="flash-val" id="rank-cvd">#2–6</span></div></div>
     </div>
     <div class="ps-body">
       <div class="ai-items">
@@ -370,7 +398,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
     <tr>
       <td><span class="phase now">Now (0–3 mo)</span></td>
       <td>Collaborative care model + telepsychiatry (existing CMU Health or FQHC infrastructure)</td>
-      <td>Mental health (#1), SUD (#3)</td>
+      <td>Mental health (#4), SUD (#3)</td>
       <td>CMU Health / Isabella Community Mental Health</td>
       <td>~$50K setup</td>
       <td>High</td>
@@ -378,7 +406,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
     <tr>
       <td><span class="phase now">Now (0–3 mo)</span></td>
       <td>AI-assisted smoking cessation via text (SmokefreeMI partnership)</td>
-      <td>Cancer (#2), COPD, CVD</td>
+      <td>Cancer (#1), COPD, CVD</td>
       <td>County Health Dept / MDHHS</td>
       <td>&lt;$10K/yr</td>
       <td>Moderate</td>
@@ -410,7 +438,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
     <tr>
       <td><span class="phase yr1">Year 1</span></td>
       <td>Predictive cancer risk screening embedded in primary care EMR</td>
-      <td>Cancer (#2)</td>
+      <td>Cancer (#1)</td>
       <td>CMU / McLaren / MiHIA</td>
       <td>~$20K integration</td>
       <td>Moderate</td>
@@ -434,7 +462,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
     <tr>
       <td><span class="phase yr2">Year 2</span></td>
       <td>Prescription digital therapeutics for depression/anxiety (Rejoyn)</td>
-      <td>Mental health (#1)</td>
+      <td>Mental health (#4)</td>
       <td>CMU Health / Medicaid coverage</td>
       <td>Medicaid billable</td>
       <td>Moderate</td>
@@ -453,7 +481,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
 <p>Embedding AI public health methods into the CMU MPH curriculum creates a pipeline of trained students who can implement these tools in Michigan county health departments. This simultaneously builds regional capacity, generates collaborative research opportunities, and positions CMU as the state's center for AI-augmented public health practice.</p>
 
 <div class="note">
-  <strong>Next step:</strong> The most immediate actionable opportunity is to contact <a href="https://e-hail.umich.edu/" style="color:inherit">U-M e-HAIL</a> (2026 AI &amp; Health Symposium, September 11) and <a href="https://www.mphi.org/" style="color:inherit">Michigan Public Health Institute (MPHI)</a> to discuss this analysis as preliminary data for a joint grant application targeting AI-assisted mental health access in rural Michigan. With mental health now documented as the #1 DALY burden at 29.8% adult prevalence (2,713 DALYs/yr), this analysis provides compelling quantitative justification for the Significance section of an NIH R21 or HRSA Rural Health grant.
+  <strong>Next step:</strong> The most immediate actionable opportunity is to contact <a href="https://e-hail.umich.edu/" style="color:inherit">U-M e-HAIL</a> (2026 AI &amp; Health Symposium, September 11) and <a href="https://www.mphi.org/" style="color:inherit">Michigan Public Health Institute (MPHI)</a> to discuss this analysis as preliminary data for a joint grant application targeting AI-assisted mental health access in rural Michigan. With cancer now documented as the #1 DALY burden (4,057 DALYs/yr) and mental health access remaining a critical structural gap (176,938:1 psychiatrist ratio, #4 burden at 1,733 DALYs remission-adj), this analysis provides compelling quantitative justification for the Significance section of an NIH R21 or HRSA Rural Health grant.
 </div>
 
 <!-- References -->
@@ -474,12 +502,77 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
 </ol>
 
 <footer-doc>
-  <strong>Document status:</strong> Companion supplement to Isabella County Disease Burden Analysis v4.0. Not peer-reviewed. For community planning, grant development, and conference presentation.<br>
+  <strong>Document status:</strong> Companion supplement to Isabella County Disease Burden Analysis v5.0. Not peer-reviewed. For community planning, grant development, and conference presentation.<br>
   <strong>Data sources:</strong> CDC PLACES 2024 · CDC WONDER 2020–22 · IHME GBD 2021 · MDHHS 2024 · ACS 2022<br>
   <strong>Author:</strong> Sergey Soshnikov<br>
   © 2026 Soshnikov
 </footer-doc>
 
 </div><!-- end .doc -->
+
+<script>
+const LE_DATA = {
+  mi: {
+    total: '10,579',
+    note: 'Michigan LE 78.6 yrs · planning-grade sensitivity · Mental health #1',
+    conditions: {
+      mental:  { daly: '2,713', rank: '#1' },
+      cancer:  { daly: '2,693', rank: '#2' },
+      sud:     { daly: '2,516', rank: '#3' },
+      cvd:     { daly: '2,149', rank: '#4–6' },
+    }
+  },
+  gbd: {
+    total: '15,430',
+    note: 'Frontier LE + MH remission-adj · primary standard · Cancer #1 · 95% UI 14,459–16,481',
+    conditions: {
+      mental:  { daly: '1,733', rank: '#4' },
+      cancer:  { daly: '4,057', rank: '#1' },
+      sud:     { daly: '2,904', rank: '#3' },
+      cvd:     { daly: '4,375', rank: '#2–6' },
+    }
+  }
+};
+
+let currentStandard = 'mi';
+
+function setStandard(s) {
+  currentStandard = s;
+  const data = LE_DATA[s];
+
+  // Toggle buttons
+  document.getElementById('btn-mi').classList.toggle('active', s === 'mi');
+  document.getElementById('btn-gbd').classList.toggle('active', s === 'gbd');
+  document.getElementById('le-note').textContent = data.note;
+
+  // Update total DALY in abstract paragraph
+  const totalEl = document.getElementById('total-dalys');
+  if (totalEl) flashUpdate(totalEl, data.total);
+
+  // Update each condition card
+  Object.entries(data.conditions).forEach(([key, val]) => {
+    const dalyEl = document.getElementById('daly-' + key);
+    const rankEl = document.getElementById('rank-' + key);
+    if (dalyEl) flashUpdate(dalyEl, val.daly);
+    if (rankEl) flashUpdate(rankEl, val.rank);
+  });
+
+  // Update intro paragraph ordering note
+  const orderNote = document.getElementById('order-note');
+  if (orderNote) {
+    orderNote.textContent = s === 'mi'
+      ? 'ordered by MI planning standard (LE 78.6 yrs) · Mental health #1'
+      : 'ordered by GBD/WHO frontier standard (LE 89.1 yrs) · Cancer #1';
+  }
+}
+
+function flashUpdate(el, newText) {
+  el.classList.remove('flashing');
+  void el.offsetWidth;
+  el.classList.add('flashing');
+  el.textContent = newText;
+  setTimeout(() => el.classList.remove('flashing'), 400);
+}
+</script>
 </body>
 </html>
