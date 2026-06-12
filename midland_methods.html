@@ -101,10 +101,9 @@ tbody td{padding:7px 10px;vertical-align:top;}
 
 <!-- Shared framework callout -->
 <div style="background:#f0fdf4;border:1.5px solid #86efac;border-left:5px solid #059669;border-radius:0 8px 8px 0;padding:14px 20px;margin-bottom:24px;font-size:13px;color:#064e3b;">
-  <strong>📋 This document is a county-specific supplement.</strong>
-  The DALY equations, Python pipeline architecture, data source descriptions, Monte Carlo uncertainty model, and GitHub code availability are documented in the
-  <a href="methods_supplement.html" style="color:#059669;font-weight:700;text-decoration:none;">→ Shared Methodology Framework</a>
-  (shared across all county analyses). This supplement covers Midland County-specific data quality, FIPS-level inputs, CDC PLACES API status, and county-specific analytic considerations.
+  <strong>📋 Midland County — specific findings and data notes.</strong>
+  For how DALYs are calculated, the Python pipeline, uncertainty model, and data sources, see the
+  <a href="methods_supplement.html" style="color:#059669;font-weight:700;text-decoration:none;">→ Shared Methodology Framework</a>.
 </div>
 
 <!-- Data source confirmation -->
@@ -134,7 +133,7 @@ tbody td{padding:7px 10px;vertical-align:top;}
 <!-- Abstract -->
 <div class="abstract">
   <div class="hd">Abstract</div>
-  <p><strong>Background.</strong> Midland County, Michigan (pop. 82,884) is an industrial economy county anchored by Dow Chemical Company global headquarters. Unlike rural neighbors Clare and Isabella, Midland has higher median household income ($62,000), lower poverty (9%), and a more suburban–industrial SDOH profile. This analysis applies the Lakes Linked Care DALY framework to estimate health burden as a planning baseline and grant-application support tool.</p>
+  <p><strong>Background.</strong> Midland County, Michigan (pop. 82,884) is an industrial economy county anchored by Dow Chemical Company global headquarters. Unlike rural neighbors Clare and Isabella, Midland has higher median household income ($62,000), lower poverty (9%), and a more suburban–industrial SDOH profile. This analysis applies the Lakes Linked Care DALY framework — which uses disability weights and WHO reference standards from the IHME Global Burden of Disease Study, a body of work we deeply respect — as an educational planning tool to estimate health burden as a baseline for grant applications and county health planning. This is not a formal GBD estimate and does not attempt to replicate IHME's rigorous global methodology.</p>
   <p><strong>Methods.</strong> DALY estimates were constructed from CDC PLACES 2023 (BRFSS 2021–22, age-adjusted county-level prevalence for FIPS 26111), CDC WONDER 2020–22 (pooled 3-year mortality counts), IHME GBD 2021 disability weights, and U.S. Census ACS 2022 population denominators. YLL uses the WHO GHE frontier reference life table (89.1 years) as primary standard; Michigan observed LE (78.6 years) is the planning sensitivity. MH remission factor ×0.50 applied. Pipeline: <code>director.py --county midland --steps harvest,calculate,factcheck</code>.</p>
   <p><strong>Results.</strong> Primary burden (MI LE, remission-adjusted MH): <strong>14,335 DALYs/yr</strong> (YLL 6,505 + YLD 7,830). Cancer leads (3,457 DALYs), followed by SUD (3,267) and Mental Health (3,231). Total estimated deaths: 592/yr. Economic burden: $889M/yr (human capital) · $7.2B/yr (VSL, income-adjusted). Fact check: <strong>PASS</strong> — 0 HIGH, 0 MEDIUM, 10 LOW issues.</p>
   <p><strong>Limitations.</strong> SUD prevalence derived from binge-drinking + OUD proxy (direct SUD county prevalence not available in CDC PLACES). Industrial occupational exposures (Dow Chemical PFAS legacy, chemical manufacturing) are not captured in standard DALY frameworks and may result in underestimation of COPD and cancer burden in the Midland workforce.</p>
