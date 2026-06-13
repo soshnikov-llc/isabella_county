@@ -26,6 +26,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .sitenav .links{display:flex;gap:4px;}
 .sitenav a.navlink{color:rgba(255,255,255,.7);font-size:12.5px;padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s;}
 .sitenav a.navlink:hover,.sitenav a.navlink.active{background:rgba(255,255,255,.12);color:#fff;}
+.nico{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px;margin-right:5px;flex-shrink:0;}
 
 /* ── HERO ── */
 .hero{background:linear-gradient(130deg,#0a2618 0%,#0d3321 40%,#0f2d1f 100%);padding:36px 28px 30px;}
@@ -51,7 +52,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .btn-toggle.active{background:var(--navy);border-color:var(--navy);color:#fff;}
 .cond-checks{display:flex;flex-wrap:wrap;gap:6px;}
 .cond-check{display:flex;align-items:center;gap:5px;background:var(--bg);border:1.5px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;font-weight:600;transition:all .15s;user-select:none;}
-.cond-check.on{border-color:var(--accent,var(--navy));background:rgba(var(--accent-rgb,15,31,61),.06);}
+.cond-check.on{border-color:var(--blue);background:rgba(26,86,219,.08);color:var(--navy);}
 .cond-check input{display:none;}
 .ctrl-info{font-size:11px;color:var(--muted);align-self:center;max-width:300px;line-height:1.5;}
 
@@ -150,14 +151,14 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
   <div class="links" style="display:flex;gap:4px;align-items:center;">
     <span style="font-size:10px;color:rgba(255,255,255,.35);padding:0 4px;">Counties:</span>
     <div class="county-group">
-      <a class="navlink" href="isabella.html">📊 Isabella</a>
-      <a class="navlink" href="clare.html">🚨 Clare</a>
-      <a class="navlink active" href="midland.html">🏭 Midland</a>
+      <a class="navlink" href="isabella.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Isabella</a>
+      <a class="navlink" href="clare.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Clare</a>
+      <a class="navlink active" href="midland.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Midland</a>
     </div>
     <span style="color:rgba(255,255,255,.2);padding:0 4px;">|</span>
-    <a class="navlink" href="index.html">🏠 Portal</a>
-    <a class="navlink" href="midland_roi.html">💰 Economic Impact</a>
-    <a class="navlink" href="midland_methods.html">📋 Methods</a>
+    <a class="navlink" href="index.html"><svg class="nico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Portal</a>
+    <a class="navlink" href="midland_roi.html"><svg class="nico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2a2.6 2.6 0 0 0-5 .6c0 3 5 1.4 5 4.4a2.6 2.6 0 0 1-5 .6M12 6.3v11.4"/></svg>Economic Impact</a>
+    <a class="navlink" href="midland_methods.html"><svg class="nico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Methods</a>
   </div>
 </nav>
 
@@ -170,22 +171,22 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
 <div class="county-compare-bar" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;">
   <div style="max-width:1200px;margin:0 auto;padding:0 28px;display:flex;align-items:stretch;overflow-x:auto;">
     <a href="isabella.html" style="display:flex;flex-direction:column;padding:10px 20px 10px 0;margin-right:20px;border-right:1px solid #e2e8f0;text-decoration:none;color:inherit;flex-shrink:0;border-bottom:3px solid transparent;">
-      <span style="font-size:11.5px;font-weight:700;color:#1a56db;">📊 Isabella</span>
+      <span style="font-size:11.5px;font-weight:700;color:#1a56db;"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Isabella</span>
       <span style="font-size:13px;font-weight:800;">15,430</span>
       <span style="font-size:10px;color:#64748b;">DALYs · pop 64,565</span>
     </a>
     <a href="clare.html" style="display:flex;flex-direction:column;padding:10px 20px 10px 0;margin-right:20px;border-right:1px solid #e2e8f0;text-decoration:none;color:inherit;flex-shrink:0;border-bottom:3px solid transparent;">
-      <span style="font-size:11.5px;font-weight:700;color:#dc2626;">🚨 Clare</span>
+      <span style="font-size:11.5px;font-weight:700;color:#1e40af;"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Clare</span>
       <span style="font-size:13px;font-weight:800;">8,198</span>
       <span style="font-size:10px;color:#64748b;">DALYs · pop 30,013</span>
     </a>
-    <div style="display:flex;flex-direction:column;padding:10px 20px 10px 0;margin-right:20px;border-right:1px solid #e2e8f0;flex-shrink:0;border-bottom:3px solid #059669;">
-      <span style="font-size:11.5px;font-weight:700;color:#059669;">🏭 Midland</span>
+    <div style="display:flex;flex-direction:column;padding:10px 20px 10px 0;margin-right:20px;border-right:1px solid #e2e8f0;flex-shrink:0;border-bottom:3px solid #3b82f6;">
+      <span style="font-size:11.5px;font-weight:700;color:#3b82f6;"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Midland</span>
       <span style="font-size:13px;font-weight:800;">14,335</span>
       <span style="font-size:10px;color:#64748b;">DALYs · pop 82,884</span>
     </div>
     <div style="display:flex;flex-direction:column;padding:10px 20px 10px 0;margin-right:20px;flex-shrink:0;opacity:0.4;">
-      <span style="font-size:11.5px;font-weight:700;color:#64748b;">🌾 Gratiot</span>
+      <span style="font-size:11.5px;font-weight:700;color:#64748b;"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Gratiot</span>
       <span style="font-size:13px;font-weight:800;">—</span>
       <span style="font-size:10px;color:#64748b;">Q3 2026</span>
     </div>
@@ -318,12 +319,14 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
       <p class="sub">Disability-Adjusted Life Years · <span id="chart1-sub">Michigan LE 78.6 · ranked by burden</span></p>
       <canvas id="dalyChart" height="270"></canvas>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Interactive — use LE standard and MH prevalence toggles above to recalculate.</p>
+      <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> DALY = disability-adjusted life year · YLL = years of life lost · YLD = years lived with disability · MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes</p>
     </div>
     <div class="card">
       <h3>Comorbidity Co-occurrence — Expected Counts</h3>
       <p class="sub">Expected cases with both conditions simultaneously · independence model · Midland County n=82,884 · hover cell for DW product &amp; DALY correction</p>
       <canvas id="heatmapChart" style="width:100%;display:block;margin:0 auto"></canvas>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">DM+Cancer highest pair (364 expected co-occurring cases). Independence-model planning estimate (prevalence × prevalence × adult population), consistent with the Isabella methodology. Largest DALY-correction pairs: SUD+Cancer (−29.6), SUD+MH (−25.8), Cancer+MH (−24.3).</p>
+      <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes · DW = disability weight · DALY = disability-adjusted life year</p>
     </div>
   </div>
 
@@ -335,9 +338,11 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
       <canvas id="sdohChart" height="250"></canvas>
     </div>
     <div class="card">
-      <h3>DALY Standard Comparison</h3>
-      <p class="sub">Michigan LE 78.6 vs Frontier LE 89.1 · by condition</p>
-      <canvas id="compareChart" height="250"></canvas>
+      <h3>Economic Burden by Condition</h3>
+      <p class="sub">Annual productivity loss · DALYs × $62K GDP per capita (human-capital method)</p>
+      <div style="height:240px;position:relative"><canvas id="compareChart"></canvas></div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Cancer (~$214M/yr), substance use (~$204M/yr), and mental health (~$201M/yr) are Midland's costliest conditions. Each averted DALY ≈ $62,000 recovered productivity — the ROI basis for employer and grant partnerships. Reactive to the toggles above.</p>
+      <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes · DALY = disability-adjusted life year</p>
     </div>
   </div>
 
@@ -501,6 +506,7 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
 const POP = 82884;
 const MI_LE = 78.6;
 const FRONTIER_LE = 89.1;
+const GDP_PC = 62000;
 
 const CONDITIONS = {
   cancer: {
@@ -546,6 +552,10 @@ const CONDITIONS = {
     color: '#059669', quality: ['obs','mdl'], qLabel: ['CDC PLACES 2023','CDC WONDER 2020–22']
   },
 };
+
+// LLC harmonized condition palette (muted, brand-aligned) — replaces the bright rainbow
+const LLC_PALETTE = { mh:'#6b6ecf', cancer:'#c65b4e', sud:'#c79a4b', cvd:'#2f6fb0', copd:'#4f9d8a', stroke:'#6d8aa8', dm:'#aeb8c4', diabetes:'#aeb8c4' };
+Object.keys(CONDITIONS).forEach(k=>{ if(LLC_PALETTE[k]) CONDITIONS[k].color = LLC_PALETTE[k]; });
 
 // Compute prevalent cases from POP
 Object.keys(CONDITIONS).forEach(k => {
@@ -706,36 +716,19 @@ function initCharts() {
     }
   });
 
-  // Chart 4: MI LE vs Frontier LE comparison by condition
+  // Chart 4: Economic burden by condition (DALYs × GDP per capita)
   const ctx4 = document.getElementById('compareChart').getContext('2d');
-  const condOrder = ['cancer','mh','sud','copd','cvd','stroke','diabetes'];
-  const labels4 = condOrder.map(k=>CONDITIONS[k].short);
-  const miVals = condOrder.map(k=>{
-    const yllMI = Math.round(CONDITIONS[k].deaths * Math.max(0, MI_LE - CONDITIONS[k].mean_age));
-    const yldVal = k==='mh' ? CONDITIONS.mh.yld_active : CONDITIONS[k].yld_raw;
-    return yllMI + yldVal;
-  });
-  const frVals = condOrder.map(k=>{
-    const yllFR = Math.round(CONDITIONS[k].deaths * Math.max(0, FRONTIER_LE - CONDITIONS[k].mean_age));
-    const yldVal = k==='mh' ? CONDITIONS.mh.yld_active : CONDITIONS[k].yld_raw;
-    return yllFR + yldVal;
-  });
-
   ch4 = new Chart(ctx4, {
     type: 'bar',
-    data: {
-      labels: labels4,
-      datasets: [
-        { label:'MI LE 78.6 (primary)',       data:miVals, backgroundColor:'#059669', borderRadius:3 },
-        { label:'Frontier LE 89.1 (sensitivity)', data:frVals, backgroundColor:'#0d9488', borderRadius:3 }
-      ]
-    },
+    data: { labels:[], datasets:[ { label:'Economic burden ($M/yr)', data:[], backgroundColor:[], borderRadius:4, barThickness:16 } ]},
     options: {
+      indexAxis: 'y',
       responsive: true,
-      plugins: { legend:{ position:'bottom', labels:{ font:{size:11}, boxWidth:12 }}},
+      maintainAspectRatio: false,
+      plugins: { legend:{ display:false }, tooltip:{ callbacks:{ label:ctx=>`$${ctx.raw}M/yr productivity loss` }}},
       scales: {
-        x: { ticks:{font:{size:10}}},
-        y: { grid:{color:'#f1f5f9'}, title:{ display:true, text:'DALYs', font:{size:11}}}
+        x: { grid:{color:'#f1f5f9'}, ticks:{font:{size:10}, callback:v=>'$'+v+'M'}, title:{ display:true, text:'$ millions / year', font:{size:11}}},
+        y: { grid:{display:false}, ticks:{font:{size:11}}}
       }
     }
   });
@@ -757,7 +750,8 @@ function initCharts() {
     function clr(v){
       if(!v) return null;
       const t=Math.max(0,Math.min(1,(v-90)/320));
-      return `rgb(${Math.round(254+(127-254)*t)},${Math.round(226+(29-226)*t)},${Math.round(226+(29-226)*t)})`;
+      // Lakes Linked Care blue scale: light blue (#ebf3ff) → brand blue (#1a56db)
+      return `rgb(${Math.round(235+(26-235)*t)},${Math.round(243+(86-243)*t)},${Math.round(255+(219-255)*t)})`;
     }
     function draw(){
       const W=cv.offsetWidth||480, ML=52, MT=20, MR=18, MB=44;
@@ -817,6 +811,13 @@ function updateCharts() {
   ch1.data.datasets[1].data = ylds;
   ch1.data.datasets[1].backgroundColor = colors.map(c=>c+'88');
   ch1.update('none');
+
+  if (ch4) {
+    ch4.data.labels = sorted.map(x=>x.d.short);
+    ch4.data.datasets[0].data = sorted.map(x=>Math.round(x.total*GDP_PC/1e6));
+    ch4.data.datasets[0].backgroundColor = sorted.map(x=>x.d.color+'cc');
+    ch4.update('none');
+  }
 }
 
 // ═══════════════════════════════════════════

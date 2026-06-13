@@ -26,6 +26,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .sitenav .links{display:flex;gap:4px;}
 .sitenav a.navlink{color:rgba(255,255,255,.7);font-size:12.5px;padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s;}
 .sitenav a.navlink:hover,.sitenav a.navlink.active{background:rgba(255,255,255,.12);color:#fff;}
+.nico{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px;margin-right:5px;flex-shrink:0;}
+.ccb-name .nico{width:14px;height:14px;vertical-align:-2px;}
 
 /* ── HERO ── */
 .hero{background:linear-gradient(130deg,var(--navy) 0%,#1e3a5f 60%,#1a4a6e 100%);padding:36px 28px 30px;}
@@ -51,7 +53,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-seri
 .btn-toggle.active{background:var(--navy);border-color:var(--navy);color:#fff;}
 .cond-checks{display:flex;flex-wrap:wrap;gap:6px;}
 .cond-check{display:flex;align-items:center;gap:5px;background:var(--bg);border:1.5px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;font-weight:600;transition:all .15s;user-select:none;}
-.cond-check.on{border-color:var(--accent,var(--navy));background:rgba(var(--accent-rgb,15,31,61),.06);}
+.cond-check.on{border-color:var(--blue);background:rgba(26,86,219,.08);color:var(--navy);}
 .cond-check input{display:none;}
 .ctrl-info{font-size:11px;color:var(--muted);align-self:center;max-width:260px;line-height:1.5;}
 
@@ -161,17 +163,17 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
   <div class="links">
     <span style="font-size:10px;color:rgba(255,255,255,.35);padding:0 4px;">Counties:</span>
     <div class="county-group">
-      <a class="navlink active" href="isabella.html">📊 Isabella</a>
-      <a class="navlink" href="clare.html">🚨 Clare</a>
-      <a class="navlink" href="midland.html">🏭 Midland</a>
+      <a class="navlink active" href="isabella.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Isabella</a>
+      <a class="navlink" href="clare.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Clare</a>
+      <a class="navlink" href="midland.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Midland</a>
     </div>
     <span style="color:rgba(255,255,255,.2);padding:0 4px;">|</span>
-    <a class="navlink" href="index.html">🏠 Portal</a>
+    <a class="navlink" href="index.html"><svg class="nico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Portal</a>
     <span style="color:rgba(255,255,255,.2);padding:0 4px;">|</span>
-    <a class="navlink" href="isabella_roi.html">💰 Economic Impact</a>
-    <a class="navlink" href="isabella_interventions.html">🤖 Interventions</a>
-    <a class="navlink" href="isabella_methods.html">📋 Methods</a>
-    <a class="navlink" href="isabella_trends.html">📈 Trends</a>
+    <a class="navlink" href="isabella_roi.html"><svg class="nico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2a2.6 2.6 0 0 0-5 .6c0 3 5 1.4 5 4.4a2.6 2.6 0 0 1-5 .6M12 6.3v11.4"/></svg>Economic Impact</a>
+    <a class="navlink" href="isabella_interventions.html"><svg class="nico" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="12" cy="17" r="2"/><path d="M7.8 8.4 10.4 15.4M16.2 8.4 13.6 15.4M8 7h8"/></svg>Interventions</a>
+    <a class="navlink" href="isabella_methods.html"><svg class="nico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Methods</a>
+    <a class="navlink" href="isabella_trends.html"><svg class="nico" viewBox="0 0 24 24"><path d="M4 4v16h16"/><path d="M8 14l3-3 3 2 5-6"/></svg>Trends</a>
   </div>
 </nav>
 
@@ -179,30 +181,30 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
 <div class="county-compare-bar">
   <div class="ccb-inner">
     <div class="ccb-county active">
-      <span class="ccb-name">📊 Isabella County</span>
+      <span class="ccb-name"><svg class="nico" style="color:#1a56db" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Isabella County</span>
       <span class="ccb-stat">15,430 DALYs/yr</span>
       <span class="ccb-pop">Pop. 64,565 · FIPS 26073</span>
     </div>
     <a class="ccb-county" href="clare.html">
-      <span class="ccb-name">🚨 Clare County</span>
-      <span class="ccb-stat" style="color:var(--red)">8,198 DALYs/yr</span>
+      <span class="ccb-name"><svg class="nico" style="color:#1e40af" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Clare County</span>
+      <span class="ccb-stat" style="color:#1e40af">8,198 DALYs/yr</span>
       <span class="ccb-pop">Pop. 30,013 · FIPS 26035</span>
     </a>
     <a class="ccb-county" href="midland.html">
-      <span class="ccb-name" style="color:var(--green)">🏭 Midland County</span>
-      <span class="ccb-stat" style="color:var(--green)">14,335 DALYs/yr</span>
+      <span class="ccb-name"><svg class="nico" style="color:#3b82f6" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Midland County</span>
+      <span class="ccb-stat" style="color:#3b82f6">14,335 DALYs/yr</span>
       <span class="ccb-pop">Pop. 82,884 · FIPS 26111</span>
     </a>
     <div class="ccb-county disabled">
-      <span class="ccb-name">🌾 Gratiot</span>
+      <span class="ccb-name"><svg class="nico" style="color:var(--muted)" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Gratiot</span>
       <span class="ccb-stat" style="color:var(--muted);font-size:11px">Q3 2026</span>
     </div>
     <div class="ccb-county disabled">
-      <span class="ccb-name">🎓 Mecosta</span>
+      <span class="ccb-name"><svg class="nico" style="color:var(--muted)" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Mecosta</span>
       <span class="ccb-stat" style="color:var(--muted);font-size:11px">Q4 2026</span>
     </div>
     <div class="ccb-county disabled">
-      <span class="ccb-name">🏙️ Washtenaw</span>
+      <span class="ccb-name"><svg class="nico" style="color:var(--muted)" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Washtenaw</span>
       <span class="ccb-stat" style="color:var(--muted);font-size:11px">Q4 2026</span>
     </div>
   </div>
@@ -323,12 +325,14 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
       <p class="sub">Disability-Adjusted Life Years · <span id="chart1-sub">Michigan LE 78.6 · sorted by burden</span></p>
       <canvas id="dalyChart" height="270"></canvas>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Interactive charts use Michigan LE planning standard. Hero stats reflect primary (frontier LE + remission-adj = 15,430 DALYs). Use MH prevalence toggle above to apply remission adjustment.</p>
+      <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> DALY = disability-adjusted life year · YLL = years of life lost (premature death) · YLD = years lived with disability · MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes</p>
     </div>
     <div class="card">
       <h3>Comorbidity Co-occurrence — Expected Counts</h3>
       <p class="sub">Expected cases with both conditions simultaneously · independence model · Isabella County n=64,565 · hover cell for DW product &amp; DALY correction</p>
       <canvas id="heatmapChart" style="width:100%;display:block;margin:0 auto"></canvas>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">DM+COPD highest pair (403 expected co-occurring cases). Used in v10 comorbidity correction: multiplicative DW model (DW<sub>net</sub> = 1−∏(1−DW<sub>i</sub>)) reduces total YLD by 3.4% (CF=0.966), −189 DALYs. Top DALY-correction pairs: Cancer+SUD (−22.7), MH+SUD (−21.6), MH+Cancer (−20.7).</p>
+      <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes · DW = disability weight · DALY = disability-adjusted life year</p>
     </div>
   </div>
 
@@ -346,12 +350,13 @@ a.ccb-county:hover{border-bottom-color:var(--blue);}
     </div>
   </div>
 
-  <!-- Comparison chart: MI LE vs GBD side-by-side -->
+  <!-- Economic burden by condition -->
   <div class="card" style="margin-bottom:18px">
-    <h3>DALY Estimates by Standard — Side-by-Side Comparison</h3>
-    <p class="sub">Sensitivity (MI LE 78.6 yrs) vs Primary (Frontier LE 89.1 yrs + remission-adj) · no discounting</p>
-    <canvas id="compareChart" height="220"></canvas>
-    <p style="font-size:11px;color:var(--muted);margin-top:8px">Primary (frontier LE + remission-adj): Cancer #1 (4,057), CVD #2 (3,302) — higher YLL at late ages. MI LE sensitivity (bars in dark): MH #1 (2,713 DALYs without remission adj). Remission toggle affects MH bar height.</p>
+    <h3>Economic Burden by Condition</h3>
+    <p class="sub">Annual productivity loss · DALYs × $62K GDP per capita (human-capital method, Michigan LE) · sorted by burden</p>
+    <div style="height:240px;position:relative"><canvas id="compareChart"></canvas></div>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">Cancer (~$167M/yr) and substance use (~$156M/yr) carry the largest measurable economic burden — together roughly half the county's productivity loss. Each averted DALY ≈ $62,000 in recovered productivity, the ROI basis for grant budgets. Excludes direct medical costs. Reactive to the LE &amp; MH toggles above.</p>
+    <p style="font-size:10.5px;color:#94a3b8;margin-top:6px"><strong>Abbreviations:</strong> MH = mental health · SUD = substance use · CVD = cardiovascular disease · COPD = chronic obstructive pulmonary disease · DM = type-2 diabetes · DALY = disability-adjusted life year</p>
   </div>
 
   <!-- Abbreviations -->
@@ -622,6 +627,10 @@ const CONDITIONS = {
   dm:     { name:'Diabetes T2',    short:'DM',     icd:'E11',     deaths:25,  age:70,  yld:328,  gbd_yll:480,  prev:'11.6% total',   dw:'0.054',        color:'#64748b', quality:['obs'],       qLabel:['CDC PLACES 2024'] },
 };
 
+// LLC harmonized condition palette (muted, brand-aligned) — replaces the bright rainbow
+const LLC_PALETTE = { mh:'#6b6ecf', cancer:'#c65b4e', sud:'#c79a4b', cvd:'#2f6fb0', copd:'#4f9d8a', stroke:'#6d8aa8', dm:'#aeb8c4', diabetes:'#aeb8c4' };
+Object.keys(CONDITIONS).forEach(k=>{ if(LLC_PALETTE[k]) CONDITIONS[k].color = LLC_PALETTE[k]; });
+
 const MORT = {
   labels: ['All Causes','IHD/HF','Cancer','COPD','Stroke','Diabetes'],
   isabella:[819.9,198.6,175.1,60.6,59.4,31.1],
@@ -798,15 +807,11 @@ function initCharts() {
     {label:'Michigan Avg',data:[15.0,13.7,6.1,36.7,14.3,44.2],backgroundColor:'rgba(26,86,219,.12)',borderColor:'#1a56db',borderWidth:2,pointRadius:4}
   ]}, options:{ responsive:true, plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:12}}}, scales:{r:{ticks:{font:{size:9},backdropColor:'transparent'},grid:{color:'#e2e8f0'}}}}});
 
-  // Comparison chart: MI LE vs GBD side-by-side
+  // Economic burden by condition (DALYs × GDP per capita)
   const ctx5 = document.getElementById('compareChart').getContext('2d');
-  const cmpLabels = ['Cancer','CVD','SUD','MH','COPD','Stroke','Diabetes'];
-  const cmpMI  = [2693, 1432, 2516, 2713, 1093, 717, 545];
-  const cmpGBD = [4057, 3302, 2904, 1733, 1553, 1073, 808];
-  ch5 = new Chart(ctx5,{ type:'bar', data:{ labels:cmpLabels, datasets:[
-    {label:'Sensitivity – MI LE 78.6',  data:cmpMI,  backgroundColor:'#0f1f3d', borderRadius:3},
-    {label:'Primary – Frontier LE 89.1', data:cmpGBD, backgroundColor:'#3b82f6', borderRadius:3}
-  ]}, options:{ responsive:true, plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:12}},tooltip:{callbacks:{footer:items=>`Difference: +${(items[items.length-1]?.raw - items[0]?.raw)||0} DALYs`}}}, scales:{x:{ticks:{font:{size:11}}},y:{grid:{color:'#f1f5f9'},title:{display:true,text:'DALYs',font:{size:11}}}}}});
+  ch5 = new Chart(ctx5,{ type:'bar', data:{ labels:[], datasets:[
+    {label:'Economic burden ($M/yr)', data:[], backgroundColor:[], borderRadius:4, barThickness:16}
+  ]}, options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>`$${ctx.raw}M/yr productivity loss`}}}, scales:{x:{grid:{color:'#f1f5f9'},ticks:{font:{size:11},callback:v=>'$'+v+'M'},title:{display:true,text:'$ millions / year (human capital)',font:{size:11}}},y:{grid:{display:false},ticks:{font:{size:11}}}}}});
 
   // Comorbidity heatmap
   (function(){
@@ -833,7 +838,8 @@ function initCharts() {
     function clr(v){
       if(!v) return null;
       const t=Math.max(0,Math.min(1,(v-90)/320));
-      return `rgb(${Math.round(254+(127-254)*t)},${Math.round(226+(29-226)*t)},${Math.round(226+(29-226)*t)})`;
+      // Lakes Linked Care blue scale: light blue (#ebf3ff) → brand blue (#1a56db)
+      return `rgb(${Math.round(235+(26-235)*t)},${Math.round(243+(86-243)*t)},${Math.round(255+(219-255)*t)})`;
     }
     function draw(){
       const W=cv.offsetWidth||480, ML=52, MT=20, MR=18, MB=44;
@@ -896,10 +902,10 @@ function updateCharts() {
 
 function updateCompareChart() {
   if (!ch5) return;
-  const mhMI  = state.remission ? (453 + 1130) : 2713;  // 453 = YLL(MI), 1130 or 2260 = YLD
-  const mhGBD = state.remission ? 1733 : 2861;
-  ch5.data.datasets[0].data = [2693, 1432, 2516, mhMI,  1093, 717, 545];
-  ch5.data.datasets[1].data = [4057, 3302, 2904, mhGBD, 1553, 1073, 808];
+  const sorted = getSorted();
+  ch5.data.labels = sorted.map(x=>x.d.short);
+  ch5.data.datasets[0].data = sorted.map(x=>Math.round(x.total*GDP_PC/1e6));
+  ch5.data.datasets[0].backgroundColor = sorted.map(x=>x.d.color+'cc');
   ch5.update('none');
 }
 
