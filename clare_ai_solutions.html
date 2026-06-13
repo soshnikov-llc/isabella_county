@@ -130,6 +130,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
 .sitenav .links{display:flex;gap:4px;align-items:center;}
 .sitenav a.navlink{color:rgba(255,255,255,.7);font-size:12.5px;padding:6px 12px;border-radius:6px;text-decoration:none;transition:all .15s;}
 .sitenav a.navlink:hover,.sitenav a.navlink.active{background:rgba(255,255,255,.12);color:#fff;}
+.nico{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px;margin-right:5px;flex-shrink:0;}
 .county-group{display:flex;gap:2px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:3px;}
 .county-group .navlink{border-radius:5px;}
 </style>
@@ -138,19 +139,20 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
   <div class="links">
     <span style="font-size:10px;color:rgba(255,255,255,.35);padding:0 4px;">Counties:</span>
     <div class="county-group">
-      <a class="navlink" href="isabella.html">📊 Isabella</a>
-      <a class="navlink" href="clare.html">🚨 Clare</a>
-      <a class="navlink" href="midland.html">🏭 Midland</a>
+      <a class="navlink" href="isabella.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Isabella</a>
+      <a class="navlink" href="clare.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Clare</a>
+      <a class="navlink" href="midland.html"><svg class="nico" viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg>Midland</a>
     </div>
     <span style="color:rgba(255,255,255,.2);padding:0 4px;">|</span>
-    <a class="navlink" href="index.html">🏠 Portal</a>
+    <a class="navlink" href="index.html"><svg class="nico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Portal</a>
     <span style="color:rgba(255,255,255,.2);padding:0 4px;">|</span>
-    <a class="navlink" href="clare.html">🚨 Dashboard</a>
-    <a class="navlink" href="clare_roi.html">💰 Economic Impact</a>
-    <a class="navlink active" href="clare_ai_solutions.html">🤖 Interventions</a>
-    <a class="navlink" href="clare_methods.html">📋 Methods</a>
+    <a class="navlink" href="clare.html"><svg class="nico" viewBox="0 0 24 24"><path d="M3 21h18"/><rect x="5" y="11" width="3" height="7" rx="1"/><rect x="10.5" y="6" width="3" height="12" rx="1"/><rect x="16" y="9" width="3" height="9" rx="1"/></svg>Dashboard</a>
+    <a class="navlink" href="clare_roi.html"><svg class="nico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2a2.6 2.6 0 0 0-5 .6c0 3 5 1.4 5 4.4a2.6 2.6 0 0 1-5 .6M12 6.3v11.4"/></svg>Economic Impact</a>
+    <a class="navlink active" href="clare_ai_solutions.html"><svg class="nico" viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><circle cx="12" cy="17" r="2"/><path d="M7.8 8.4 10.4 15.4M16.2 8.4 13.6 15.4M8 7h8"/></svg>Interventions</a>
+    <a class="navlink" href="clare_methods.html"><svg class="nico" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Methods</a>
   </div>
 </nav>
+<div style="max-width:1100px;margin:14px auto 0;padding:10px 16px;background:#f0f7ff;border:1px solid #bfdbfe;border-left:4px solid #1a56db;border-radius:0 8px 8px 0;font-size:12.5px;color:#1e3a5f;line-height:1.6;"><strong>Scope note:</strong> The AI &amp; digital-health interventions shown here are illustrative <strong>“low-hanging fruit”</strong> — a small, high-feasibility/high-impact sample chosen to demonstrate planning-grade ROI. They are not an exhaustive or prescriptive list; many other interventions may apply.</div>
 
 <div class="running-hd">
   <span>Soshnikov · Clare County · AI &amp; Digital Health Applications · 2026</span>
@@ -181,6 +183,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
 <div class="challenge-box">
   <strong>Rural implementation challenges specific to Clare County:</strong>
   <ul style="margin-top:6px;margin-left:18px;line-height:2;">
+    <li><strong>No CMU-equivalent anchor:</strong> All programs must route through FQHC networks, county health department, or regional hospital systems (McLaren Central Michigan, MidMichigan Health). No university health services delivery channel.</li>
     <li><strong>Older population digital literacy:</strong> Median age 46.8 years. A substantial proportion of the highest-need patients (COPD, CVD, diabetes) are in the 60–75 age group with lower smartphone literacy. Technology adoption pathways must include phone-based (non-smartphone) interfaces, in-person training through senior centers, and family caregiver support.</li>
     <li><strong>Smaller patient base:</strong> 30,013 total residents — approximately half Isabella's population. Per-program economies of scale are lower; vendor contracts and platform fees have higher per-patient cost at smaller volume. Shared-service models with adjacent counties (Osceola, Isabella) should be explored.</li>
     <li><strong>MUA whole-county designation:</strong> Medicaid reimbursement incentives and HRSA rural health program eligibility are strong — Clare qualifies for a broader set of federal programs than Isabella, including the whole-county MUA track for community health center expansion and telehealth reimbursement waivers.</li>
@@ -371,7 +374,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
         <div class="ai-item">
           <div class="ai-tag" style="color:#0d9488">Telepsychiatry</div>
           <h5>Collaborative care + telepsychiatry via FQHC</h5>
-          <p>The scalable MH delivery model is collaborative care embedded within the FQHC and primary care setting, with telepsychiatry consultation via regional academic centers (psychiatric residency program or U-M). AI-assisted caseload prioritization helps the behavioral health care manager triage which patients need psychiatry consultation vs. protocol-based management. Evidence for collaborative care in rural settings: Unützer 2002 IMPACT RCT remains foundational.</p>
+          <p>Clare has no resident psychiatrist and no university mental health service infrastructure comparable to CMU Health in Isabella. The only scalable MH delivery model is collaborative care embedded within the FQHC and primary care setting, with telepsychiatry consultation via regional academic centers (CMU's psychiatric residency program or U-M). AI-assisted caseload prioritization helps the behavioral health care manager triage which patients need psychiatry consultation vs. protocol-based management. Evidence for collaborative care in rural settings: Unützer 2002 IMPACT RCT remains foundational.</p>
           <span class="ev mod">Moderate evidence</span>
         </div>
         <div class="ai-item">
@@ -429,7 +432,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
         <div class="ai-item">
           <div class="ai-tag" style="color:#059669">Equity Mapping</div>
           <h5>Census-tract health gap mapping for Clare County</h5>
-          <p>CDC PLACES + Census + MDHHS data can be mapped at census-tract level to identify micro-geographies within Clare County where cancer screening uptake, MAT enrollment, or hypertension control is lowest — enabling precise resource targeting within a small county. Given Clare's 30,013 population across a 572 sq. mile area, geographic dispersion of need is high.</p>
+          <p>CDC PLACES + Census + MDHHS data can be mapped at census-tract level to identify micro-geographies within Clare County where cancer screening uptake, MAT enrollment, or hypertension control is lowest — enabling precise resource targeting within a small county. Given Clare's 30,013 population across a 572 sq. mile area, geographic dispersion of need is high. CMU School of Public Health has existing analytical capacity for this type of project as a multi-county collaboration.</p>
           <span class="ev strong">Strong evidence</span>
         </div>
       </div>
@@ -440,7 +443,7 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
 
 <!-- Section 2 - Implementation Roadmap -->
 <h2 class="sec">2. Phased Implementation Roadmap — Clare County</h2>
-<p>Given Clare County's resource constraints (no anchor, smaller population, MUA designation limiting specialist recruitment), the following phased approach prioritizes high-impact, low-infrastructure interventions first. All Year 1+ interventions should be built on FQHC and county health department infrastructure, not greenfield systems.</p>
+<p>Given Clare County's resource constraints (no CMU anchor, smaller population, MUA designation limiting specialist recruitment), the following phased approach prioritizes high-impact, low-infrastructure interventions first. All Year 1+ interventions should be built on FQHC and county health department infrastructure, not greenfield systems.</p>
 
 <table class="impl-table">
   <thead>
@@ -499,8 +502,8 @@ footer-doc { display: block; margin-top: 40px; padding-top: 14px; border-top: 1p
       <td><span class="phase yr2">Year 2</span></td>
       <td>AI-assisted cancer navigation + lung CT screening risk stratification</td>
       <td>Cancer (#1, 1,372 DALYs)</td>
-      <td>McLaren Clare / MidMichigan</td>
-      <td>~$__K integration</td>
+      <td>McLaren Clare / MidMichigan / CMU MPH collaborative</td>
+      <td>~$20K integration</td>
       <td>Moderate</td>
     </tr>
     <tr>
